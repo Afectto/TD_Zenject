@@ -3,7 +3,7 @@ using UnityEngine;
 using Zenject;
 
 #if UNITY_EDITOR
-using UnityEditor;
+
 #endif
 [DisallowMultipleComponent]
 public abstract class Weapon : MonoBehaviour, IListener
@@ -22,18 +22,18 @@ public abstract class Weapon : MonoBehaviour, IListener
     
     [Inject] public EventManager EventManager { get; set; }
 
-    private void Awake()
+    protected virtual void Awake()
     {
         _owner = gameObject;
         _ownerID = _owner.GetInstanceID();
     }
 
-    public void OnEnable()
+    public virtual void OnEnable()
     {
         EventManager.OnStopMoveEnemy += EventManagerOnOnStopMoveEnemy;
     }
 
-    public void OnDisable()
+    public virtual  void OnDisable()
     {
         EventManager.OnStopMoveEnemy -= EventManagerOnOnStopMoveEnemy;
     }

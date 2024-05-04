@@ -949,6 +949,7 @@
           </e>
           <e p="Tower" t="Include">
             <e p="Tower.cs" t="Include" />
+            <e p="TowerWeapon.cs" t="Include" />
           </e>
         </e>
       </e>

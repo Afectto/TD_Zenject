@@ -1,5 +1,4 @@
 using UnityEngine;
-using Zenject;
 
 [RequireComponent(typeof(Health))]
 public class Tower : MonoBehaviour, IListener
@@ -22,19 +21,12 @@ public class Tower : MonoBehaviour, IListener
             }
         }
     }
+    
     public void OnEnable()
     {
         if (EventManager != null)
         {
             EventManager.OnDeath += OnDeath;
-        }
-    }
-
-    private void OnDeath(int owner)
-    {
-        if (GetInstanceID() == owner)
-        {
-            EventManager.TriggerOnTowerDestroy();
         }
     }
 
@@ -45,4 +37,13 @@ public class Tower : MonoBehaviour, IListener
             EventManager.OnDeath -= OnDeath;
         }
     }
+    
+    private void OnDeath(int owner)
+    {
+        if (GetInstanceID() == owner)
+        {
+            EventManager.TriggerOnTowerDestroy();
+        }
+    }
+
 }

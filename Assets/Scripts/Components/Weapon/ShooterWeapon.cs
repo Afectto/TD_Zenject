@@ -1,10 +1,9 @@
 ﻿using System.Collections;
-using UnityEditor;
 using UnityEngine;
 
 public class ShooterWeapon : Weapon
 {
-    [Space(10)]
+    [Space(15)]
     [SerializeField] private Bullet bulletPrefab;
     [SerializeField] private float bulletSpeed;
     [SerializeField] private Transform firePoint;
@@ -13,18 +12,17 @@ public class ShooterWeapon : Weapon
     {
         while (true)
         {
-            yield return new WaitForSeconds(attackRite);
             CreateBullet();
+            yield return new WaitForSeconds(attackRite);
         }
         // ReSharper disable once IteratorNeverReturns
     }
     
-    private void CreateBullet()
+    protected void CreateBullet()
     {
         var bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-        bullet.speed = bulletSpeed;
         bullet.OnSetDamage += BulletOnSetDamage;
-        bullet.OnSetTarget(TargetTransform);
+        bullet.OnSetSpeedAndTarget(bulletSpeed, TargetTransform);
     }
 
     private void BulletOnSetDamage(Bullet obj)

@@ -1,11 +1,9 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed;
+    private float _speed;
     private Transform _target;
     private Vector3 _lastEnemyPosition;
 
@@ -36,7 +34,7 @@ public class Bullet : MonoBehaviour
     {
         var transformPosition = transform.position;
 
-        transformPosition = Vector3.MoveTowards(transformPosition, targetPosition, Time.deltaTime * speed);
+        transformPosition = Vector3.MoveTowards(transformPosition, targetPosition, Time.deltaTime * _speed);
         transform.position = transformPosition;
         _lastEnemyPosition = targetPosition;
 
@@ -45,8 +43,9 @@ public class Bullet : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
     }
 
-    public void OnSetTarget(Transform tar)
+    public void OnSetSpeedAndTarget(float speed, Transform tar)
     {
+        _speed = speed;
         _target = tar;
     }
     
