@@ -2,7 +2,6 @@ using UnityEngine;
 using Zenject;
 
 [RequireComponent(typeof(Health))]
-[RequireComponent(typeof(Weapon))]
 [RequireComponent(typeof(MoveToTarget))]
 [DisallowMultipleComponent]
 [ExecuteInEditMode]
@@ -14,7 +13,6 @@ public class Enemy : MonoBehaviour, IListener
     private void Awake()
     {
         AddToInspector();
-
         _weapon = GetComponent<Weapon>();
     }
 
@@ -26,7 +24,6 @@ public class Enemy : MonoBehaviour, IListener
             if (enemy != null )
             {
                 enemy.gameObject.AddComponent<Health>();
-                enemy.gameObject.AddComponent<Weapon>();
                 enemy.gameObject.AddComponent<MoveToTarget>();
             }
         }
@@ -35,8 +32,9 @@ public class Enemy : MonoBehaviour, IListener
     private void Start()
     {
         EventManager?.TriggerMoveCommand(gameObject.GetInstanceID(), _weapon.WeaponRange, Vector3.zero);
-        
-        _weapon.SetTarget(FindObjectOfType<Tower>().gameObject.GetInstanceID());
+
+        var tower = FindObjectOfType<Tower>().gameObject;
+        _weapon.SetTargetInstanceID(tower.GetInstanceID(), tower.transform);
     }
 
     public void OnEnable()
@@ -62,4 +60,5 @@ public class Enemy : MonoBehaviour, IListener
             EventManager.OnDeath -= OnDeath;
         }
     }
+
 }

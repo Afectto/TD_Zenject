@@ -933,7 +933,12 @@
           <e p="Components" t="Include">
             <e p="Health.cs" t="Include" />
             <e p="MoveToTarget.cs" t="Include" />
-            <e p="Weapon.cs" t="Include" />
+            <e p="Weapon" t="Include">
+              <e p="Bullet.cs" t="Include" />
+              <e p="MeleeWeapon.cs" t="Include" />
+              <e p="ShooterWeapon.cs" t="Include" />
+              <e p="Weapon.cs" t="Include" />
+            </e>
           </e>
           <e p="Enemy" t="Include">
             <e p="Enemy.cs" t="Include" />

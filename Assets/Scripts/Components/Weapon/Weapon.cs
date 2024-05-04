@@ -2,17 +2,21 @@ using System.Collections;
 using UnityEngine;
 using Zenject;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 [DisallowMultipleComponent]
-public class Weapon : MonoBehaviour, IListener
+public abstract class Weapon : MonoBehaviour, IListener
 {
     private GameObject _owner;
     private int _ownerID;
     
     [SerializeField] private float weaponRange;
-    [SerializeField] private float attackRite;
-    [SerializeField] private float damage;
+    [SerializeField] protected float attackRite;
+    [SerializeField] protected float damage;
 
-    private int _targetInstanceID;
+    protected int TargetInstanceID;
+    protected Transform TargetTransform;
     
     public float WeaponRange => weaponRange;
     
@@ -34,11 +38,12 @@ public class Weapon : MonoBehaviour, IListener
         EventManager.OnStopMoveEnemy -= EventManagerOnOnStopMoveEnemy;
     }
 
-    public void SetTarget(int targetId)
+    public void SetTargetInstanceID(int targetId, Transform target)
     {
-        _targetInstanceID = targetId;
+        TargetInstanceID = targetId;
+        TargetTransform = target;
     }
-    
+
     private void EventManagerOnOnStopMoveEnemy(int owner)
     {
         if (_ownerID == owner)
@@ -47,14 +52,13 @@ public class Weapon : MonoBehaviour, IListener
         }
     }
 
-    protected virtual IEnumerator Attack()
+    protected abstract IEnumerator Attack();
+    
+#if UNITY_EDITOR
+    private void OnDrawGizmos()
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(attackRite);
-            EventManager.TriggerOnSetDamage(_targetInstanceID, damage);
-            Debug.Log($"ATTACK {_owner.name}");
-        }
-        // ReSharper disable once IteratorNeverReturns
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, WeaponRange);
     }
+#endif
 }
