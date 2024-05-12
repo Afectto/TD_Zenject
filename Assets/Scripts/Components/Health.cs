@@ -14,7 +14,7 @@ public class Health : MonoBehaviour, IListener
     [SerializeField] private float maxHealth;
     private float _currentHealth;
 
-    [Inject] public EventManager EventManager { get; set; }
+    [Inject] public EventManager EventManager { get;}
 
     private void Awake()
     {

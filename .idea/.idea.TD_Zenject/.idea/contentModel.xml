@@ -941,11 +941,26 @@
             </e>
           </e>
           <e p="Enemy" t="Include">
+            <e p="ArcherEnemy.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
+            <e p="KnightEnemy.cs" t="Include" />
+            <e p="MerchantEnemy.cs" t="Include" />
+            <e p="PriestEnemy.cs" t="Include" />
+            <e p="SoldierEnemy.cs" t="Include" />
+            <e p="Spawn Enemy" t="Include">
+              <e p="EnemyFactory.cs" t="Include" />
+              <e p="SpawnEnemy.cs" t="Include" />
+            </e>
+            <e p="ThiefEnemy.cs" t="Include" />
           </e>
           <e p="EventSystem" t="Include">
             <e p="EventManager.cs" t="Include" />
             <e p="GameInstaller.cs" t="Include" />
+          </e>
+          <e p="ScriptableObject" t="Include">
+            <e p="EnemyGroup" t="Include">
+              <e p="EnemyGroup.cs" t="Include" />
+            </e>
           </e>
           <e p="Tower" t="Include">
             <e p="Tower.cs" t="Include" />

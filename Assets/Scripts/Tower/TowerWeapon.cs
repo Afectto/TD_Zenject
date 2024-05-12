@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TowerWeapon : ShooterWeapon
@@ -12,7 +11,6 @@ public class TowerWeapon : ShooterWeapon
 
     private void FindTarget()
     {
-
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, WeaponRange);
         foreach (Collider2D collider in colliders)
         {

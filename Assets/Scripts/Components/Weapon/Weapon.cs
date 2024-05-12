@@ -20,7 +20,7 @@ public abstract class Weapon : MonoBehaviour, IListener
     
     public float WeaponRange => weaponRange;
     
-    [Inject] public EventManager EventManager { get; set; }
+    [Inject] public EventManager EventManager { get;}
 
     protected virtual void Awake()
     {

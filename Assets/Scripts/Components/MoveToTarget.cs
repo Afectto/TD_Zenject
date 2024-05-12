@@ -4,7 +4,7 @@ using Zenject;
 
 public interface IListener
 {
-    EventManager EventManager { get; set; }
+    EventManager EventManager { get; }
     void OnEnable();
     void OnDisable();
 }
@@ -17,7 +17,7 @@ public class MoveToTarget : MonoBehaviour, IListener
     
     [SerializeField] private float speed;
     
-    [Inject] public EventManager EventManager { get; set; }
+    [Inject] public EventManager EventManager { get;}
 
     private void Awake()
     {

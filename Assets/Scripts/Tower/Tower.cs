@@ -1,9 +1,10 @@
 using UnityEngine;
+using Zenject;
 
 [RequireComponent(typeof(Health))]
 public class Tower : MonoBehaviour, IListener
 {
-    public EventManager EventManager { get; set; }
+    [Inject] public EventManager EventManager { get;}
     
     private void Awake()
     {

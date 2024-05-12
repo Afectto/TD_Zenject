@@ -5,10 +5,10 @@ using Zenject;
 [RequireComponent(typeof(MoveToTarget))]
 [DisallowMultipleComponent]
 [ExecuteInEditMode]
-public class Enemy : MonoBehaviour, IListener
+public abstract class Enemy : MonoBehaviour, IListener
 {
     private Weapon _weapon;
-   [Inject] public EventManager EventManager { get; set; }
+   [Inject] public EventManager EventManager { get;}
     
     private void Awake()
     {
