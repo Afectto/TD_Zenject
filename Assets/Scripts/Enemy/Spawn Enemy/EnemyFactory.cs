@@ -4,24 +4,16 @@ using UnityEngine;
 using Zenject;
 using Random = UnityEngine.Random;
 
-public class EnemyFactory 
+public class EnemyFactory : ObjectFactory
 {
-    private readonly DiContainer _container;
-    
     private float xMin = -13f;
     private float xMax = 13f;
     private float yMin = -6f;
     private float yMax = 6f;
     private float avoidanceRadius = 7f;
-    
-    public EnemyFactory(DiContainer container)
-    {
-        _container = container;
-    }
 
-    public void Create(Vector3 spawnPosition, GameObject prefab)
+    public EnemyFactory(DiContainer container) : base(container)
     {
-        _container.InstantiatePrefab(prefab, spawnPosition, quaternion.identity, null);
     }
     
     public void CreateEnemyGroup(List<EnemyInfo> enemyInfos)
@@ -46,9 +38,8 @@ public class EnemyFactory
     {        
         Vector3 offset = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0f);
         Vector3 spawnPosition = groupPosition + offset;
-        Create(spawnPosition, enemyPrefab);
+        Create(enemyPrefab, spawnPosition, quaternion.identity);
     }
-
 
     private Vector3 GenerateRandomPosition()
     {
@@ -61,5 +52,5 @@ public class EnemyFactory
 
         return new Vector3(randX, randY, 0);
     }
-}
 
+}

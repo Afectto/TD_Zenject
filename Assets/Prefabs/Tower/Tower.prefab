@@ -132,6 +132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dc1211e98d153b40b4002892ec4cff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponList: {fileID: 8340206626155473658}
+  firePoint: {fileID: 1595530798305335669}
 --- !u!114 &942580928167667571
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,13 +2,6 @@
 using UnityEngine;
 using Zenject;
 
-public interface IListener
-{
-    EventManager EventManager { get; }
-    void OnEnable();
-    void OnDisable();
-}
-
 [DisallowMultipleComponent]
 public class MoveToTarget : MonoBehaviour, IListener
 {

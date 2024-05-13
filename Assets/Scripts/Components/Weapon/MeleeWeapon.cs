@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class MeleeWeapon : Weapon
+public abstract class MeleeWeapon : Weapon
 {
     protected override IEnumerator Attack()
     {

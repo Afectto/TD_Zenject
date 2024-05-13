@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class ShooterWeapon : Weapon
+public abstract class ShooterWeapon : Weapon
 {
     [Space(15)]
     [SerializeField] private Bullet bulletPrefab;
@@ -29,5 +29,10 @@ public class ShooterWeapon : Weapon
     {
         obj.OnSetDamage -= BulletOnSetDamage;
         EventManager.TriggerOnSetDamage(TargetInstanceID, damage);
+    }
+
+    public void SetFirePoint(Transform point)
+    {
+        firePoint = point;
     }
 }

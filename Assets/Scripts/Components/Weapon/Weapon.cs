@@ -2,9 +2,6 @@ using System.Collections;
 using UnityEngine;
 using Zenject;
 
-#if UNITY_EDITOR
-
-#endif
 [DisallowMultipleComponent]
 public abstract class Weapon : MonoBehaviour, IListener
 {

@@ -82,7 +82,7 @@ PrefabInstance:
       addedObject: {fileID: 3968092049960502483}
     - targetCorrespondingSourceObject: {fileID: 18458220624957628, guid: ea9dd07affde37247a36345657aeccd5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -5067140372575026563}
+      addedObject: {fileID: 1982598715119219531}
   m_SourcePrefab: {fileID: 100100000, guid: ea9dd07affde37247a36345657aeccd5, type: 3}
 --- !u!4 &5041005319759427040 stripped
 Transform:
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81ccf3df076dbbb47ad8232bce50ba35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-5067140372575026563
+--- !u!114 &1982598715119219531
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5442518647394874843}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab8cbc5eb7834d058bdc3833184b5e87, type: 3}
+  m_Script: {fileID: 11500000, guid: d2b00cb7f80151b49a28f1575869d7b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponRange: 5

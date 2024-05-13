@@ -12,19 +12,3 @@ public class EnemyGroup : ScriptableObject
     public List<EnemyInfo> EnemyInfos => _enemyInfos;
     public int Tier => _tier;
 }
-
-[System.Serializable]
-public class EnemyInfo
-{
-    public GameObject enemyPrefab;
-    public int countInGroup;
-}
-
-public enum EnemyType
-{
-    Knight,
-    Archer,
-    Priest,
-    Soldier,
-    Thief
-}

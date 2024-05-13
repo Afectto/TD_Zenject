@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoldierEnemy : Enemy
+public class EnemyMeleeWeapon : MeleeWeapon
 {
-
 }
-
