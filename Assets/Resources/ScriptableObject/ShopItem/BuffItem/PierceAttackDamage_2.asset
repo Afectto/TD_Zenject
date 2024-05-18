@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PierceAttackDamage_2
   m_EditorClassIdentifier: Assembly-CSharp::ShopBuffItem
   slotData:
-    name: Coin_4
-    skin: {fileID: 21300000, guid: dee156b2e51baf34ca1f2d3a48b410ed, type: 3}
-    price: 5000
+    name: PierceAttackDamage_2
+    skin: {fileID: 21300000, guid: eb0839c2c5705db4db4ca6a354423d5c, type: 3}
+    price: 1000

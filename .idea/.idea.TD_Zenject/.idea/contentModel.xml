@@ -969,6 +969,7 @@
             <e p="DamageType.cs" t="Include" />
             <e p="EnemyInfo.cs" t="Include" />
             <e p="EnemyType.cs" t="Include" />
+            <e p="GlobalTimer.cs" t="Include" />
             <e p="SlotData.cs" t="Include" />
             <e p="WeaponInfo.cs" t="Include" />
           </e>

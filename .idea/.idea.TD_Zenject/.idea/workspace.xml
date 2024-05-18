@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="575b67b3-549f-4941-9f7c-781be809db8d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventSystem/EventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventSystem/EventManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/MoneyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/MoneyManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tower/SpawnTowerWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tower/SpawnTowerWeapon.cs" afterDir="false" />
-    </list>
+    <list default="true" id="575b67b3-549f-4941-9f7c-781be809db8d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +32,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C5ED7824-3908-4EF1-BC2A-D85EEC89E9FE/dd/50791250/RectTransform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B11BA2A8-FBF2-4F21-9F7C-C98532A11304/70/eac058b0/RuntimeConstructorInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObject/ShopBuffItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Info/GlobalTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tower/TowerWeaponFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B11BA2A8-FBF2-4F21-9F7C-C98532A11304/eb/2217f496/ConstructorInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C5ED7824-3908-4EF1-BC2A-D85EEC89E9FE/56/be19ea8d/Object.cs" root0="SKIP_HIGHLIGHTING" />
@@ -96,10 +90,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/WeaponObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EventSystem/GameInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EventSystem/EventManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/UpdateTimer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tower/SpawnTowerWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Shop/MoneyManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Info/Timer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Info/GlobalTimer.cs" />
       </list>
     </option>
   </component>
@@ -157,7 +153,7 @@
       <updated>1714813290459</updated>
       <workItem from="1714813292710" duration="25313000" />
       <workItem from="1715500464709" duration="12687000" />
-      <workItem from="1716019813443" duration="17292000" />
+      <workItem from="1716019813443" duration="18175000" />
     </task>
     <servers />
   </component>

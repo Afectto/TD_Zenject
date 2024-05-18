@@ -15,4 +15,4 @@ MonoBehaviour:
   slotData:
     name: Coin_1
     skin: {fileID: 21300000, guid: 80ae5817d92b419419877b4b8b5c0f53, type: 3}
-    price: 5400
+    price: 500

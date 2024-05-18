@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Health_4
   m_EditorClassIdentifier: Assembly-CSharp::ShopBuffItem
   slotData:
-    name: Coin_4
-    skin: {fileID: 21300000, guid: dee156b2e51baf34ca1f2d3a48b410ed, type: 3}
+    name: Health_4
+    skin: {fileID: 21300000, guid: a4150c4144a09fb4f94eca9e5865da1f, type: 3}
     price: 5000

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PierceAttackSpeed_1
   m_EditorClassIdentifier: Assembly-CSharp::ShopBuffItem
   slotData:
-    name: Coin_4
-    skin: {fileID: 21300000, guid: dee156b2e51baf34ca1f2d3a48b410ed, type: 3}
-    price: 5000
+    name: PierceAttackSpeed_1
+    skin: {fileID: 21300000, guid: 5b0184215bee91347b0613ff24b8bbba, type: 3}
+    price: 500
