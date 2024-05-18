@@ -35,4 +35,25 @@ public class EventManager
     {
         OnTowerDestroy?.Invoke();
     }
+    
+    //SHOP
+    public event Action<string> OnClickShopSlot;
+    public virtual void TriggerOnClickShopSlot(string name)
+    {
+        OnClickShopSlot?.Invoke(name);
+    }
+
+    public event Action<int> OnBuyItemInShop;
+    public virtual void TriggerOnBuyItemInShop(int price)
+    {
+        OnBuyItemInShop?.Invoke(price);
+    }
+    
+    //MONEY MANAGER
+
+    public event Action OnChangeMoney;
+    public virtual void TriggerOnChangeMoney()
+    {
+        OnChangeMoney?.Invoke();
+    }
 }

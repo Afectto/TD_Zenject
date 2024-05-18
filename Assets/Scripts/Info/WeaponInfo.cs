@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 
 [System.Serializable]
-public class WeaponInfo
+public struct WeaponInfo
 {
     public GameObject prefab;
+    
 }
