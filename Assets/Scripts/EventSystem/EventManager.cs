@@ -18,7 +18,7 @@ public class EventManager
 
     //DAMAGE
     public event Action<int, float> OnSetDamage;
-    public  void TriggerOnSetDamage(int target, float damage)
+    public void TriggerOnSetDamage(int target, float damage)
     {
         OnSetDamage?.Invoke(target, damage);
     }
@@ -31,20 +31,20 @@ public class EventManager
     
     //GAME STATE
     public event Action OnTowerDestroy;
-    public virtual void TriggerOnTowerDestroy()
+    public void TriggerOnTowerDestroy()
     {
         OnTowerDestroy?.Invoke();
     }
     
     //SHOP
     public event Action<string> OnClickShopSlot;
-    public virtual void TriggerOnClickShopSlot(string name)
+    public void TriggerOnClickShopSlot(string name)
     {
         OnClickShopSlot?.Invoke(name);
     }
 
     public event Action<int> OnBuyItemInShop;
-    public virtual void TriggerOnBuyItemInShop(int price)
+    public void TriggerOnBuyItemInShop(int price)
     {
         OnBuyItemInShop?.Invoke(price);
     }
@@ -52,8 +52,15 @@ public class EventManager
     //MONEY MANAGER
 
     public event Action OnChangeMoney;
-    public virtual void TriggerOnChangeMoney()
+    public void TriggerOnChangeMoney()
     {
         OnChangeMoney?.Invoke();
+    }
+    
+    //UPDATE TIMER
+    public event Action OnNeedUpdateShop;
+    public void TriggerOnNeedUpdateShop()
+    {
+        OnNeedUpdateShop?.Invoke();
     }
 }

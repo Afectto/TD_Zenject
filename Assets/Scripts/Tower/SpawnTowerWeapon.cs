@@ -5,10 +5,10 @@ using System.Linq;
 using UnityEngine;
 using Zenject;
 
-public class SpawnTowerWeapon : MonoBehaviour
+public class SpawnTowerWeapon : MonoBehaviour, IListener
 {
     [Inject] private TowerWeaponFactory _weaponFactory;
-    [Inject] private EventManager _eventManager;
+    [Inject] public EventManager EventManager { get; }
 
     private List<WeaponObject> _weaponObjects;
     
@@ -16,7 +16,6 @@ public class SpawnTowerWeapon : MonoBehaviour
     public void Instance()
     {
         _weaponObjects = Resources.LoadAll<WeaponObject>("ScriptableObject/WeaponObject").ToList();
-        _eventManager.OnClickShopSlot += BuyItemInShop;
     }
 
     private void BuyItemInShop(string nameWeapon)
@@ -27,9 +26,14 @@ public class SpawnTowerWeapon : MonoBehaviour
             _weaponFactory.CreateWeapon(weaponObject.WeaponInfo);
         }
     }
-
-    private void OnDestroy()
+    
+    public void OnEnable()
     {
-        _eventManager.OnClickShopSlot += BuyItemInShop;
+        EventManager.OnClickShopSlot += BuyItemInShop;
+    }
+
+    public void OnDisable()
+    {
+        EventManager.OnClickShopSlot += BuyItemInShop;
     }
 }

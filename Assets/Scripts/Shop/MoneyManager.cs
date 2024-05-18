@@ -3,9 +3,9 @@ using TMPro;
 using UnityEngine;
 using Zenject;
 
-public class MoneyManager :MonoBehaviour
+public class MoneyManager :MonoBehaviour, IListener
 {
-    [Inject] private EventManager _eventManager;
+    [Inject]public EventManager EventManager { get; }
     [SerializeField] private TextMeshProUGUI text;
 
     public int CurrentMoney { get; private set; }
@@ -13,8 +13,6 @@ public class MoneyManager :MonoBehaviour
     [Inject]
     public void Initialize()
     {
-        _eventManager.OnBuyItemInShop += BuyItemInShop;
-        _eventManager.OnChangeMoney += UpdateMoneyText;
         CurrentMoney = 5000;
         UpdateMoneyText();
     }
@@ -22,13 +20,13 @@ public class MoneyManager :MonoBehaviour
     private void BuyItemInShop(int price)
     {
         CurrentMoney -= price;
-        _eventManager.TriggerOnChangeMoney();
+        EventManager?.TriggerOnChangeMoney();
     }
 
     public void AddMoney(int value)
     {
         CurrentMoney += value;
-        _eventManager.TriggerOnChangeMoney();
+        EventManager?.TriggerOnChangeMoney();
     }
 
     private void UpdateMoneyText()
@@ -36,9 +34,15 @@ public class MoneyManager :MonoBehaviour
         text.text = CurrentMoney.ToString();
     }
 
-    private void OnDestroy()
+    public void OnEnable()
     {
-        _eventManager.OnBuyItemInShop -= BuyItemInShop;
-        _eventManager.OnChangeMoney -= UpdateMoneyText;
+        EventManager.OnBuyItemInShop += BuyItemInShop;
+        EventManager.OnChangeMoney += UpdateMoneyText;
+    }
+
+    public void OnDisable()
+    {
+        EventManager.OnBuyItemInShop -= BuyItemInShop;
+        EventManager.OnChangeMoney -= UpdateMoneyText;
     }
 }

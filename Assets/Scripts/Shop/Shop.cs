@@ -6,10 +6,10 @@ using UnityEngine;
 using Zenject;
 using Random = UnityEngine.Random;
 
-public class Shop : MonoBehaviour
+public class Shop : MonoBehaviour, IListener
 {
     [Inject] private MoneyManager _moneyManager;
-    [Inject] private EventManager _eventManager;
+    [Inject] public EventManager EventManager { get; }
 
     [SerializeField] private Slot slotPrefab;
     private List<ShopBuffItem> _buffItems;
@@ -34,6 +34,8 @@ public class Shop : MonoBehaviour
         
         _buffSlots = new List<Slot>();
         _weaponSlots = new List<Slot>();
+
+        EventManager.OnNeedUpdateShop += UpdateShop;
         
         refreshValueText.text = _refreshValue.ToString();
         
@@ -85,13 +87,18 @@ public class Shop : MonoBehaviour
         return _weaponItems[randomIndex];
     }
 
-    public void UpdateShop()
+    public void UpdateShopByRefresh()
     {
         if(_moneyManager.CurrentMoney <= _refreshValue) return;;
-        _eventManager.TriggerOnBuyItemInShop(_refreshValue);
+        EventManager?.TriggerOnBuyItemInShop(_refreshValue);
         _refreshValue += 100;
         refreshValueText.text = _refreshValue.ToString();
         
+        UpdateShop();
+    }
+    
+    private void UpdateShop()
+    {
         foreach (var slot in _buffSlots)
         {
             UpdateSlot(slot, true);
@@ -107,5 +114,16 @@ public class Shop : MonoBehaviour
     {
         SlotData slotData = isBuff ? GetRandomBuffItem().SlotData : GetGetRandomWeaponItem().SlotData;
         slot.SetSlotData(slotData);
+    }
+
+    
+    public void OnEnable()
+    {
+        EventManager.OnNeedUpdateShop += UpdateShop;
+    }
+
+    public void OnDisable()
+    {
+        EventManager.OnNeedUpdateShop -= UpdateShop;
     }
 }

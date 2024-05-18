@@ -375,7 +375,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: UpdateShop
+        m_MethodName: UpdateShopByRefresh
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

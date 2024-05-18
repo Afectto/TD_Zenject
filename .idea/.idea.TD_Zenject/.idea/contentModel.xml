@@ -935,6 +935,8 @@
             <e p="IListener.cs" t="Include" />
             <e p="MoveToTarget.cs" t="Include" />
             <e p="ObjectFactory.cs" t="Include" />
+            <e p="Timer.cs" t="Include" />
+            <e p="UpdateTimer.cs" t="Include" />
             <e p="Weapon" t="Include">
               <e p="Bullet.cs" t="Include" />
               <e p="MeleeWeapon.cs" t="Include" />
