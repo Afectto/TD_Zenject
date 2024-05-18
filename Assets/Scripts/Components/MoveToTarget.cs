@@ -5,12 +5,12 @@ using Zenject;
 [DisallowMultipleComponent]
 public class MoveToTarget : MonoBehaviour, IListener
 {
+    [Inject] public EventManager EventManager { get;}
+    
     private GameObject _owner;
     private int _ownerID;
     
     [SerializeField] private float speed;
-    
-    [Inject] public EventManager EventManager { get;}
 
     private void Awake()
     {

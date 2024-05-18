@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -12,14 +11,14 @@ public class Shop : MonoBehaviour, IListener
     [Inject] public EventManager EventManager { get; }
 
     [SerializeField] private Slot slotPrefab;
+    [SerializeField] private TextMeshProUGUI refreshValueText;
+    
     private List<ShopBuffItem> _buffItems;
     private List<ShopWeaponItem> _weaponItems;
     private DiContainer _container;
-
     private List<Slot> _buffSlots;
     private List<Slot> _weaponSlots;
 
-    [SerializeField] private TextMeshProUGUI refreshValueText;
     private int _refreshValue = 100;
     
     private const int BUFF_COUNT = 3;

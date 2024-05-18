@@ -1,11 +1,11 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using Zenject;
 
 public class MoneyManager :MonoBehaviour, IListener
 {
     [Inject]public EventManager EventManager { get; }
+    
     [SerializeField] private TextMeshProUGUI text;
 
     public int CurrentMoney { get; private set; }

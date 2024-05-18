@@ -5,6 +5,8 @@ using Zenject;
 [DisallowMultipleComponent]
 public abstract class Weapon : MonoBehaviour, IListener
 {
+    [Inject] public EventManager EventManager { get;}
+    
     private GameObject _owner;
     private int _ownerID;
     
@@ -17,7 +19,6 @@ public abstract class Weapon : MonoBehaviour, IListener
     
     public float WeaponRange => weaponRange;
     
-    [Inject] public EventManager EventManager { get;}
 
     protected virtual void Awake()
     {

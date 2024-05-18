@@ -5,6 +5,8 @@ using Zenject;
 [DisallowMultipleComponent]
 public class Health : MonoBehaviour, IListener
 {
+    [Inject] public EventManager EventManager { get;}
+    
     private GameObject _owner;
     private int _ownerID;
 
@@ -14,7 +16,6 @@ public class Health : MonoBehaviour, IListener
     [SerializeField] private float maxHealth;
     private float _currentHealth;
 
-    [Inject] public EventManager EventManager { get;}
 
     private void Awake()
     {

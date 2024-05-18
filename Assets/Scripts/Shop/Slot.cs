@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,15 +5,15 @@ using Zenject;
 
 public class Slot : MonoBehaviour
 {
+    [Inject] private EventManager _eventManager;
+    [Inject] private MoneyManager _moneyManager;
+    
     [SerializeField] private Image itemSkin;
     [SerializeField] private TextMeshProUGUI text;
     
     private string _nameItem;
     private int _price;
     private Button _button;
-    
-    [Inject] private EventManager _eventManager;
-    [Inject] private MoneyManager _moneyManager;
 
     private void Start()
     {

@@ -5,6 +5,7 @@ using Zenject;
 public class Tower : MonoBehaviour, IListener
 {
     [Inject] public EventManager EventManager { get;}
+    
     [SerializeField] private GameObject weaponList;
     [SerializeField] private Transform firePoint;
 

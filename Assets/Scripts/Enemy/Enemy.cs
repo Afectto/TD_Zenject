@@ -7,8 +7,9 @@ using Zenject;
 [ExecuteInEditMode]
 public abstract class Enemy : MonoBehaviour, IListener
 {
+    [Inject] public EventManager EventManager { get;}
+    
     private Weapon _weapon;
-   [Inject] public EventManager EventManager { get;}
     
     private void Awake()
     {
