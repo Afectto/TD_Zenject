@@ -20,33 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="575b67b3-549f-4941-9f7c-781be809db8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Info/SlotData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Info/SlotData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/ShopItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/ShopItem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/ShopWeaponItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/ShopWeaponItem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/MoneyManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/MoneyManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Image/EnemyFill.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Image/EnemyFill.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Image/PriestBullet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Image/PriestBullet.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Image/miniature-army1024x768.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Image/miniature-army1024x768.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMeleeWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMeleeWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyShooterWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyShooterWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventSystem/EventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventSystem/EventManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventSystem/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventSystem/GameInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Info/WeaponInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Info/WeaponInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/EnemyGroup.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/EnemyGroup/EnemyGroup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/EnemyGroup/EnemyGroup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/ShopBuffItem.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/ShopBuffItem.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/WeaponItem/ShopWeaponItem.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/WeaponItem/ShopWeaponItem.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/WeaponObject/WeaponObject.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/WeaponObject/WeaponObject.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tower/ArrowWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tower/ArrowWeapon.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +42,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tower/TowerWeapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C5ED7824-3908-4EF1-BC2A-D85EEC89E9FE/dd/50791250/RectTransform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B11BA2A8-FBF2-4F21-9F7C-C98532A11304/70/eac058b0/RuntimeConstructorInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B11BA2A8-FBF2-4F21-9F7C-C98532A11304/0d/6a8085a7/RuntimeMethodInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObject/WeaponObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObject/ShopBuffItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tower/TowerWeaponFactory.cs" root0="FORCE_HIGHLIGHTING" />
@@ -112,12 +94,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/ShopItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Info/SlotData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Slot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/MoneyManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/ShopWeaponItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/WeaponObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tower/SpawnTowerWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EventSystem/GameInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/MoneyManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" />
       </list>
     </option>
   </component>
@@ -175,7 +157,7 @@
       <updated>1714813290459</updated>
       <workItem from="1714813292710" duration="25313000" />
       <workItem from="1715500464709" duration="12687000" />
-      <workItem from="1716019813443" duration="11263000" />
+      <workItem from="1716019813443" duration="16211000" />
     </task>
     <servers />
   </component>
@@ -200,74 +182,74 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="505" height="464" key="DebuggerActiveHint" timestamp="1716028415179">
+    <state width="505" height="464" key="DebuggerActiveHint" timestamp="1716035014666">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="505" height="464" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1716028415179" />
-    <state width="1877" height="283" key="GridCell.Tab.0.bottom" timestamp="1716031493998">
+    <state width="505" height="464" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1716035014666" />
+    <state width="1877" height="283" key="GridCell.Tab.0.bottom" timestamp="1716034920133">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1716031493998" />
-    <state width="1877" height="283" key="GridCell.Tab.0.center" timestamp="1716031493998">
+    <state width="1877" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1716034920133" />
+    <state width="1877" height="283" key="GridCell.Tab.0.center" timestamp="1716034920133">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1716031493998" />
-    <state width="1877" height="283" key="GridCell.Tab.0.left" timestamp="1716031493998">
+    <state width="1877" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1716034920133" />
+    <state width="1877" height="283" key="GridCell.Tab.0.left" timestamp="1716034920133">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1716031493998" />
-    <state width="1877" height="283" key="GridCell.Tab.0.right" timestamp="1716031493998">
+    <state width="1877" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1716034920133" />
+    <state width="1877" height="283" key="GridCell.Tab.0.right" timestamp="1716034920133">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1716031493998" />
-    <state width="1877" height="283" key="GridCell.Tab.1.bottom" timestamp="1716031495458">
+    <state width="1877" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1716034920133" />
+    <state width="1877" height="283" key="GridCell.Tab.1.bottom" timestamp="1716034927722">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1716031495458" />
-    <state width="1877" height="283" key="GridCell.Tab.1.center" timestamp="1716031495458">
+    <state width="1877" height="283" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1716034927722" />
+    <state width="1877" height="283" key="GridCell.Tab.1.center" timestamp="1716034927722">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1716031495458" />
-    <state width="1877" height="283" key="GridCell.Tab.1.left" timestamp="1716031495458">
+    <state width="1877" height="283" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1716034927722" />
+    <state width="1877" height="283" key="GridCell.Tab.1.left" timestamp="1716034927722">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1716031495458" />
-    <state width="1877" height="283" key="GridCell.Tab.1.right" timestamp="1716031495458">
+    <state width="1877" height="283" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1716034927722" />
+    <state width="1877" height="283" key="GridCell.Tab.1.right" timestamp="1716034927722">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1716031495458" />
-    <state width="1877" height="283" key="GridCell.Tab.2.bottom" timestamp="1716031493906">
+    <state width="1877" height="283" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1716034927722" />
+    <state width="1877" height="283" key="GridCell.Tab.2.bottom" timestamp="1716034920026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1716031493906" />
-    <state width="1877" height="283" key="GridCell.Tab.2.center" timestamp="1716031493906">
+    <state width="1877" height="283" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1716034920026" />
+    <state width="1877" height="283" key="GridCell.Tab.2.center" timestamp="1716034920026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1716031493906" />
-    <state width="1877" height="283" key="GridCell.Tab.2.left" timestamp="1716031493906">
+    <state width="1877" height="283" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1716034920026" />
+    <state width="1877" height="283" key="GridCell.Tab.2.left" timestamp="1716034920026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1716031493906" />
-    <state width="1877" height="283" key="GridCell.Tab.2.right" timestamp="1716031493906">
+    <state width="1877" height="283" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1716034920026" />
+    <state width="1877" height="283" key="GridCell.Tab.2.right" timestamp="1716034920026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1716031493906" />
-    <state width="1877" height="283" key="GridCell.Tab.3.bottom" timestamp="1716031493906">
+    <state width="1877" height="283" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1716034920026" />
+    <state width="1877" height="283" key="GridCell.Tab.3.bottom" timestamp="1716034920026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1716031493906" />
-    <state width="1877" height="283" key="GridCell.Tab.3.center" timestamp="1716031493906">
+    <state width="1877" height="283" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1716034920026" />
+    <state width="1877" height="283" key="GridCell.Tab.3.center" timestamp="1716034920026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1716031493906" />
-    <state width="1877" height="283" key="GridCell.Tab.3.left" timestamp="1716031493906">
+    <state width="1877" height="283" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1716034920026" />
+    <state width="1877" height="283" key="GridCell.Tab.3.left" timestamp="1716034920026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1716031493906" />
-    <state width="1877" height="283" key="GridCell.Tab.3.right" timestamp="1716031493906">
+    <state width="1877" height="283" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1716034920026" />
+    <state width="1877" height="283" key="GridCell.Tab.3.right" timestamp="1716034920026">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="283" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1716031493906" />
+    <state width="1877" height="283" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1716034920026" />
     <state x="788" y="205" key="RiderGenerateDialog" timestamp="1716027988526">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -285,17 +267,17 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Components/Weapon/ShooterWeapon.cs</url>
-          <line>22</line>
-          <properties documentPath="D:\UnityProgram\TD_Zenject\Assets\Scripts\Components\Weapon\ShooterWeapon.cs" initialLine="22">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Shop/Slot.cs</url>
+          <line>29</line>
+          <properties documentPath="D:\UnityProgram\TD_Zenject\Assets\Scripts\Shop\Slot.cs" initialLine="29">
             <startOffsets>
-              <option value="539" />
+              <option value="643" />
             </startOffsets>
             <endOffsets>
-              <option value="619" />
+              <option value="684" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="7" />
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

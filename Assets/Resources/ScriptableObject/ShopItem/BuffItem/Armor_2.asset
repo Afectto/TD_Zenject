@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a223effcd03f254ab1f53142c3dfca6, type: 3}
-  m_Name: ShopBuffItem
+  m_Name: Armor_2
   m_EditorClassIdentifier: Assembly-CSharp::ShopBuffItem
   slotData:
-    name: Coin_2
-    skin: {fileID: 21300000, guid: d5c78cdd27e5f51468725080cffe3f0a, type: 3}
-    price: 100
+    name: Coin_4
+    skin: {fileID: 21300000, guid: dee156b2e51baf34ca1f2d3a48b410ed, type: 3}
+    price: 5000
