@@ -37,10 +37,10 @@ public class EventManager
     }
     
     //SHOP
-    public event Action<string> OnClickShopSlot;
-    public void TriggerOnClickShopSlot(string name)
+    public event Action<string> OnNeedCreatePurchasedItem;
+    public void TriggerOnNeedCreatePurchasedItem(string name)
     {
-        OnClickShopSlot?.Invoke(name);
+        OnNeedCreatePurchasedItem?.Invoke(name);
     }
 
     public event Action<int> OnBuyItemInShop;
@@ -50,7 +50,6 @@ public class EventManager
     }
     
     //MONEY MANAGER
-
     public event Action OnChangeMoney;
     public void TriggerOnChangeMoney()
     {
@@ -63,4 +62,44 @@ public class EventManager
     {
         OnNeedUpdateShop?.Invoke();
     }
+    
+    //BUFF APPLIED
+
+    #region Tower
+    public event Action<int, float> OnAddArmorToTower;
+    public void TriggerOnAddArmorToTower(int towerId, float value)
+    {
+        OnAddArmorToTower?.Invoke(towerId, value);
+    }
+    
+    public event Action<int, float> OnAddHealthToTower;
+    public void TriggerOnAddHealthToTower(int towerId, float value)
+    {
+        OnAddHealthToTower?.Invoke(towerId, value);
+    }
+    
+    public event Action<int, float> OnAddRegenToTower;
+    public void TriggerOnAddRegenToTower(int towerId, float value)
+    {
+        OnAddRegenToTower?.Invoke(towerId, value);
+    }
+    
+    public event Action<float> OnAddIncome;
+    public void TriggerOnAddIncome(float value)
+    {
+        OnAddIncome?.Invoke(value);
+    }
+    #endregion
+
+    #region TowerWeapon
+
+
+
+    #endregion
+
+    #region Enemy
+
+
+
+    #endregion
 }

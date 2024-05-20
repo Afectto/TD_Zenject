@@ -14,7 +14,9 @@ public class GameInstaller : MonoInstaller
         Container.BindInstance(shop);
         
         Container.Bind<EventManager>().AsSingle().NonLazy();
-        
+        Container.Bind<BuffApplier>().AsSingle().NonLazy();
+        Container.Bind<Timer>().ToSelf().AsTransient();
+
         BindFactory();
     }
 

@@ -1,4 +1,3 @@
-using UnityEngine;
 using Zenject;
 
 public class TowerWeaponFactory : ObjectFactory
@@ -12,7 +11,7 @@ public class TowerWeaponFactory : ObjectFactory
 
     public void CreateWeapon(WeaponInfo weaponInfo)
     {
-        var weapon = Create(weaponInfo.prefab, Vector3.zero, Quaternion.identity, _tower.WeaponList.transform);
+        var weapon = Create(weaponInfo.prefab, _tower.WeaponList.transform);
         var towerWeapon = weapon.GetComponent<TowerWeapon>();
         if (towerWeapon)
         {

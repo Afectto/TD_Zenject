@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using Zenject;
 
@@ -8,22 +9,43 @@ public class MoneyManager :MonoBehaviour, IListener
     
     [SerializeField] private TextMeshProUGUI text;
 
-    public int CurrentMoney { get; private set; }
+    private float _incomePerSecond;
+    
+    public float CurrentMoney { get; private set; }
 
     [Inject]
     public void Initialize()
     {
         CurrentMoney = 5000;
+        _incomePerSecond = 1000 / 60f;
         UpdateMoneyText();
+        StartCoroutine(Income());
     }
-    
+
+    private IEnumerator Income()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(0.5f);
+            AddMoney(_incomePerSecond/2);
+        }
+        // ReSharper disable once IteratorNeverReturns
+    }
+
+    public void OnEnable()
+    {
+        EventManager.OnBuyItemInShop += BuyItemInShop;
+        EventManager.OnChangeMoney += UpdateMoneyText;
+        EventManager.OnAddIncome += AddIncome;
+    }
+
     private void BuyItemInShop(int price)
     {
         CurrentMoney -= price;
         EventManager?.TriggerOnChangeMoney();
     }
 
-    public void AddMoney(int value)
+    private void AddMoney(float value)
     {
         CurrentMoney += value;
         EventManager?.TriggerOnChangeMoney();
@@ -34,15 +56,15 @@ public class MoneyManager :MonoBehaviour, IListener
         text.text = CurrentMoney.ToString();
     }
 
-    public void OnEnable()
+    private void AddIncome(float value)
     {
-        EventManager.OnBuyItemInShop += BuyItemInShop;
-        EventManager.OnChangeMoney += UpdateMoneyText;
+        _incomePerSecond += value / 60;
     }
 
     public void OnDisable()
     {
         EventManager.OnBuyItemInShop -= BuyItemInShop;
         EventManager.OnChangeMoney -= UpdateMoneyText;
+        EventManager.OnAddIncome -= AddIncome;
     }
 }

@@ -7,11 +7,11 @@ public class MoveToTarget : MonoBehaviour, IListener
 {
     [Inject] public EventManager EventManager { get;}
     
+    [SerializeField] private float speed;
+    
     private GameObject _owner;
     private int _ownerID;
     
-    [SerializeField] private float speed;
-
     private void Awake()
     {
         _owner = gameObject;

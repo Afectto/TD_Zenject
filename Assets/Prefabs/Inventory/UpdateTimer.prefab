@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3963670874826411020}
-  - component: {fileID: 401473469567067722}
+  - component: {fileID: 625195502844792098}
   m_Layer: 5
   m_Name: UpdateTimer
   m_TagString: Untagged
@@ -118,7 +118,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 92.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &401473469567067722
+--- !u!114 &625195502844792098
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5262757129829741995}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 339d7ec0f588e60479f0b498695d1708, type: 3}
+  m_Script: {fileID: 11500000, guid: d1b3e2d1a30505f4bb6c570c51b6f78a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _timeText: {fileID: 4855093860493311544}

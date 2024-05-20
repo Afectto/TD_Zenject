@@ -6,16 +6,15 @@ using Zenject;
 public class Health : MonoBehaviour, IListener
 {
     [Inject] public EventManager EventManager { get;}
-    
-    private GameObject _owner;
-    private int _ownerID;
 
     [SerializeField] private Text textHealth;
     [SerializeField] private bool isShowText;
     [SerializeField] private Image fillHealthBar;
     [SerializeField] private float maxHealth;
+    
+    private GameObject _owner;
+    private int _ownerID;
     private float _currentHealth;
-
 
     private void Awake()
     {

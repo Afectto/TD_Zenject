@@ -8,6 +8,9 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.Player.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Editor" t="Include">
+          <e p="BuffObject_Editor.cs" t="Include" />
+        </e>
         <e p="Plugins" t="Include">
           <e p="Zenject" t="Include">
             <e p="LICENSE.txt" t="Include" />
@@ -931,12 +934,28 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Components" t="Include">
+            <e p="BuffApplier.cs" t="Include" />
             <e p="Health.cs" t="Include" />
-            <e p="IListener.cs" t="Include" />
+            <e p="Info" t="Include">
+              <e p="BuffInfo.cs" t="Include" />
+              <e p="BuffType.cs" t="Include" />
+              <e p="DamageType.cs" t="Include" />
+              <e p="EnemyBuffType.cs" t="Include" />
+              <e p="EnemyInfo.cs" t="Include" />
+              <e p="EnemyType.cs" t="Include" />
+              <e p="GlobalTimer.cs" t="Include" />
+              <e p="SlotData.cs" t="Include" />
+              <e p="TowerBuffType.cs" t="Include" />
+              <e p="TowerWeaponBuffType.cs" t="Include" />
+              <e p="UpdateTimer.cs" t="Include" />
+              <e p="WeaponInfo.cs" t="Include" />
+            </e>
+            <e p="Interface" t="Include">
+              <e p="IListener.cs" t="Include" />
+            </e>
             <e p="MoveToTarget.cs" t="Include" />
             <e p="ObjectFactory.cs" t="Include" />
             <e p="Timer.cs" t="Include" />
-            <e p="UpdateTimer.cs" t="Include" />
             <e p="Weapon" t="Include">
               <e p="Bullet.cs" t="Include" />
               <e p="MeleeWeapon.cs" t="Include" />
@@ -965,20 +984,17 @@
             <e p="EventManager.cs" t="Include" />
             <e p="GameInstaller.cs" t="Include" />
           </e>
-          <e p="Info" t="Include">
-            <e p="DamageType.cs" t="Include" />
-            <e p="EnemyInfo.cs" t="Include" />
-            <e p="EnemyType.cs" t="Include" />
-            <e p="GlobalTimer.cs" t="Include" />
-            <e p="SlotData.cs" t="Include" />
-            <e p="WeaponInfo.cs" t="Include" />
-          </e>
           <e p="ScriptableObject" t="Include">
             <e p="EnemyGroup.cs" t="Include" />
-            <e p="ShopBuffItem.cs" t="Include" />
-            <e p="ShopItem.cs" t="Include" />
-            <e p="ShopWeaponItem.cs" t="Include" />
-            <e p="WeaponObject.cs" t="Include" />
+            <e p="Object" t="Include">
+              <e p="BuffObject.cs" t="Include" />
+              <e p="WeaponObject.cs" t="Include" />
+            </e>
+            <e p="Shop" t="Include">
+              <e p="ShopBuffItem.cs" t="Include" />
+              <e p="ShopItem.cs" t="Include" />
+              <e p="ShopWeaponItem.cs" t="Include" />
+            </e>
           </e>
           <e p="Shop" t="Include">
             <e p="MoneyManager.cs" t="Include" />
@@ -987,10 +1003,12 @@
           </e>
           <e p="Tower" t="Include">
             <e p="ArrowWeapon.cs" t="Include" />
-            <e p="SpawnTowerWeapon.cs" t="Include" />
             <e p="Tower.cs" t="Include" />
-            <e p="TowerWeapon.cs" t="Include" />
-            <e p="TowerWeaponFactory.cs" t="Include" />
+            <e p="Weapon" t="Include">
+              <e p="SpawnTowerWeapon.cs" t="Include" />
+              <e p="TowerWeapon.cs" t="Include" />
+              <e p="TowerWeaponFactory.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

@@ -27,7 +27,7 @@ public class Slot : MonoBehaviour
         if (_moneyManager.CurrentMoney >= _price)
         {
             _eventManager?.TriggerOnBuyItemInShop(_price);
-            _eventManager?.TriggerOnClickShopSlot(_nameItem);
+            _eventManager?.TriggerOnNeedCreatePurchasedItem(_nameItem);
             ChangeActiveSlotItem(false);
         }
     }

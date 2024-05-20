@@ -14,4 +14,9 @@ public abstract class ObjectFactory
     {
         return _container.InstantiatePrefab(prefab, spawnPosition, quaternion, parent);
     }
+    
+    protected GameObject Create(GameObject prefab, Transform parent)
+    {
+        return _container.InstantiatePrefab(prefab, parent);
+    }
 }

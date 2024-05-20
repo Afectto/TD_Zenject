@@ -11,7 +11,7 @@ public class SpawnTowerWeapon : MonoBehaviour, IListener
     private List<WeaponObject> _weaponObjects;
     
     [Inject]
-    public void Instance()
+    public void Initialize()
     {
         _weaponObjects = Resources.LoadAll<WeaponObject>("ScriptableObject/WeaponObject").ToList();
     }
@@ -27,11 +27,11 @@ public class SpawnTowerWeapon : MonoBehaviour, IListener
     
     public void OnEnable()
     {
-        EventManager.OnClickShopSlot += BuyItemInShop;
+        EventManager.OnNeedCreatePurchasedItem += BuyItemInShop;
     }
 
     public void OnDisable()
     {
-        EventManager.OnClickShopSlot += BuyItemInShop;
+        EventManager.OnNeedCreatePurchasedItem += BuyItemInShop;
     }
 }
