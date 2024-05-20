@@ -53,7 +53,7 @@ public class MoneyManager :MonoBehaviour, IListener
 
     private void UpdateMoneyText()
     {
-        text.text = CurrentMoney.ToString();
+        text.text = Mathf.FloorToInt(CurrentMoney).ToString();;
     }
 
     private void AddIncome(float value)
