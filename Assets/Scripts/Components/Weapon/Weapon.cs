@@ -29,12 +29,12 @@ public abstract class Weapon : MonoBehaviour, IListener
 
     public virtual void OnEnable()
     {
-        EventManager.OnStopMoveEnemy += EventManagerOnOnStopMoveEnemy;
+        EventManager.OnStopMoveEnemy += EventManagerOnStopMoveEnemy;
     }
 
     public virtual  void OnDisable()
     {
-        EventManager.OnStopMoveEnemy -= EventManagerOnOnStopMoveEnemy;
+        EventManager.OnStopMoveEnemy -= EventManagerOnStopMoveEnemy;
     }
 
     public void SetTargetInstanceID(int targetId, Transform target)
@@ -43,7 +43,7 @@ public abstract class Weapon : MonoBehaviour, IListener
         TargetTransform = target;
     }
 
-    private void EventManagerOnOnStopMoveEnemy(int owner)
+    private void EventManagerOnStopMoveEnemy(int owner)
     {
         if (_ownerID == owner)
         {
