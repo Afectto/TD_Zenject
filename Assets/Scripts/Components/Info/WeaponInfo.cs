@@ -4,5 +4,4 @@
 public struct WeaponInfo
 {
     public GameObject prefab;
-    
 }

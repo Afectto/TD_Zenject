@@ -12,6 +12,7 @@ public class BuffObject_Editor : Editor
     private SerializedProperty _enemyBuffType;
     private SerializedProperty _towerBuffType;
     private SerializedProperty _towerWeaponBuffType;
+    private SerializedProperty _towerWeaponDamageType;
 
     private void OnEnable()
     {
@@ -23,6 +24,7 @@ public class BuffObject_Editor : Editor
         _enemyBuffType = serializedObject.FindProperty("EnemyBuffType");
         _towerBuffType = serializedObject.FindProperty("TowerBuffType");
         _towerWeaponBuffType = serializedObject.FindProperty("TowerWeaponBuffType");
+        _towerWeaponDamageType = serializedObject.FindProperty("WeaponDamageType");
     }
 
     public override void OnInspectorGUI()
@@ -38,13 +40,14 @@ public class BuffObject_Editor : Editor
         switch (controller.BuffType)
         {
             case BuffType.Tower:
-                    EditorGUILayout.PropertyField(_towerBuffType);
+                EditorGUILayout.PropertyField(_towerBuffType);
                 break;            
             case BuffType.TowerWeapon:
-                    EditorGUILayout.PropertyField(_towerWeaponBuffType);
+                EditorGUILayout.PropertyField(_towerWeaponBuffType);
+                EditorGUILayout.PropertyField(_towerWeaponDamageType);
                 break;            
             case BuffType.Enemy:
-                    EditorGUILayout.PropertyField(_enemyBuffType);
+                EditorGUILayout.PropertyField(_enemyBuffType);
                 break;
             default:
                 throw new ArgumentOutOfRangeException();

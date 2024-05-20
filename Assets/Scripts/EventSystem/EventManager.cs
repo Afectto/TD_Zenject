@@ -92,9 +92,18 @@ public class EventManager
     #endregion
 
     #region TowerWeapon
-
-
-
+    public event Action<float,WeaponDamageType> OnAddDamageBuffToTowerWeapon;
+    public void TriggerOnAddDamageBuffToTowerWeapon(float value, WeaponDamageType damageType)
+    {
+        OnAddDamageBuffToTowerWeapon?.Invoke(value, damageType);
+    }
+    
+    public event Action<float,WeaponDamageType> OnAddSpeedBuffToTowerWeapon;
+    public void TriggerOnAddSpeedBuffToTowerWeapon(float value, WeaponDamageType damageType)
+    {
+        OnAddSpeedBuffToTowerWeapon?.Invoke(value, damageType);
+    }
+    
     #endregion
 
     #region Enemy

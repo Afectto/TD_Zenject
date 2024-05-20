@@ -35,7 +35,6 @@ public class Health : MonoBehaviour, IListener
         CurrentHealth = maxHealth;
         _regenPerSecond = 0;
         textHealth.gameObject.SetActive(isShowText);
-        UpdateHealthLine();
     }
 
     public void OnEnable()

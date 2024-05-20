@@ -33,7 +33,7 @@ public class BuffApplier: IDisposable
                     AppliedBuffByTower(buff.BuffInfo, buff.TowerBuffType);
                 break;
             case BuffType.TowerWeapon:
-                    AppliedBuffByTowerWeapon(buff.BuffInfo, buff.TowerWeaponBuffType);
+                    AppliedBuffByTowerWeapon(buff.BuffInfo, buff.WeaponDamageType, buff.TowerWeaponBuffType);
                 break;
             case BuffType.Enemy:
                     AppliedBuffByEnemy(buff.BuffInfo, buff.EnemyBuffType);
@@ -62,13 +62,15 @@ public class BuffApplier: IDisposable
         }
     }
     
-    private void AppliedBuffByTowerWeapon(BuffInfo buffBuffInfo, TowerWeaponBuffType buffTowerWeaponBuffType)
+    private void AppliedBuffByTowerWeapon(BuffInfo buffBuffInfo, WeaponDamageType damageType, TowerWeaponBuffType buffTowerWeaponBuffType)
     {        
         switch (buffTowerWeaponBuffType)
         {
             case TowerWeaponBuffType.Damage:
+                EventManager.TriggerOnAddDamageBuffToTowerWeapon(buffBuffInfo.Value, damageType);
                 break;
             case TowerWeaponBuffType.Speed:
+                EventManager.TriggerOnAddSpeedBuffToTowerWeapon(buffBuffInfo.Value, damageType);
                 break;
         }
     }

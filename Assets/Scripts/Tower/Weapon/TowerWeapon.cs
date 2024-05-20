@@ -9,6 +9,36 @@ public abstract class TowerWeapon : ShooterWeapon
         StartCoroutine(Attack());
     }
 
+    public override void OnEnable()
+    {
+        base.OnEnable();
+        EventManager.OnAddDamageBuffToTowerWeapon += AddDamage;
+        EventManager.OnAddSpeedBuffToTowerWeapon += AddAttackRite;
+    }
+
+    private void AddDamage(float value, WeaponDamageType damageType)
+    {
+        if (damageType == weaponDamageType)
+        {
+            damage += damage * value / 100;
+        }
+    }
+
+    private void AddAttackRite(float value, WeaponDamageType damageType)
+    {
+        if (damageType == weaponDamageType)
+        {
+            attackRite -= attackRite * value / 100;
+        }
+    }
+
+    public override void OnDisable()
+    {
+        base.OnDisable();
+        EventManager.OnAddDamageBuffToTowerWeapon += AddDamage;
+        EventManager.OnAddSpeedBuffToTowerWeapon += AddAttackRite;
+    }
+
     private void FindTarget()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, WeaponRange);

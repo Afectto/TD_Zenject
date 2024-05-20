@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "BuffObject", menuName = "GameInfo/New BuffObject")]
 public class BuffObject : ScriptableObject
@@ -11,4 +12,5 @@ public class BuffObject : ScriptableObject
     public EnemyBuffType EnemyBuffType;
     public TowerBuffType TowerBuffType;
     public TowerWeaponBuffType TowerWeaponBuffType;
+    public WeaponDamageType WeaponDamageType;
 }

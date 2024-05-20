@@ -13,6 +13,7 @@ public abstract class Weapon : MonoBehaviour, IListener
     [SerializeField] private float weaponRange;
     [SerializeField] protected float attackRite;
     [SerializeField] protected float damage;
+    [SerializeField] protected WeaponDamageType weaponDamageType;
 
     protected int TargetInstanceID;
     protected Transform TargetTransform;
