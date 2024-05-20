@@ -939,7 +939,6 @@
             <e p="Info" t="Include">
               <e p="BuffInfo.cs" t="Include" />
               <e p="BuffType.cs" t="Include" />
-              <e p="DamageType.cs" t="Include" />
               <e p="EnemyBuffType.cs" t="Include" />
               <e p="EnemyInfo.cs" t="Include" />
               <e p="EnemyType.cs" t="Include" />
@@ -948,6 +947,7 @@
               <e p="TowerBuffType.cs" t="Include" />
               <e p="TowerWeaponBuffType.cs" t="Include" />
               <e p="UpdateTimer.cs" t="Include" />
+              <e p="WeaponDamageType.cs" t="Include" />
               <e p="WeaponInfo.cs" t="Include" />
             </e>
             <e p="Interface" t="Include">
@@ -1008,6 +1008,7 @@
               <e p="SpawnTowerWeapon.cs" t="Include" />
               <e p="TowerWeapon.cs" t="Include" />
               <e p="TowerWeaponFactory.cs" t="Include" />
+              <e p="TowerWeaponMultiplayer.cs" t="Include" />
             </e>
           </e>
         </e>

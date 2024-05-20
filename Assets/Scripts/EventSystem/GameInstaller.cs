@@ -15,7 +15,7 @@ public class GameInstaller : MonoInstaller
         
         Container.Bind<EventManager>().AsSingle().NonLazy();
         Container.Bind<BuffApplier>().AsSingle().NonLazy();
-        Container.Bind<Timer>().ToSelf().AsTransient();
+        Container.Bind<TowerWeaponMultiplayer>().AsSingle().NonLazy();
 
         BindFactory();
     }

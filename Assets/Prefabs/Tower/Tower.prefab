@@ -149,7 +149,7 @@ MonoBehaviour:
   textHealth: {fileID: 0}
   isShowText: 1
   fillHealthBar: {fileID: 0}
-  maxHealth: 100
+  maxHealth: 500
 --- !u!1 &7185581733870460965
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad499ffed9701a84a9a789c7df07af85, type: 3}
   m_Name: PierceAttackSpeed_2
   m_EditorClassIdentifier: 
-  Name: PierceAttackSpeed_1
+  Name: PierceAttackSpeed_2
   BuffInfo:
     Value: 20
   BuffType: 1
   EnemyBuffType: 0
   TowerBuffType: 0
   TowerWeaponBuffType: 0
+  WeaponDamageType: 0

@@ -15,6 +15,4 @@ MonoBehaviour:
   slotData:
     name: Arrow
     skin: {fileID: 21300000, guid: 55d7ccd2eaecd284b98564474aa40098, type: 3}
-    price: 25
-  WeaponInfo:
-    prefab: {fileID: 4404563935774771386, guid: ec3c02edc0fc001419af7ccdfd0d652d, type: 3}
+    price: 500
