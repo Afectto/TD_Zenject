@@ -16,3 +16,11 @@ MonoBehaviour:
     name: PierceAttackDamage_1
     skin: {fileID: 21300000, guid: 9d185c4b6d4f67e4ba2dddbfe91fb524, type: 3}
     price: 500
+  buffObject:
+    buffInfo:
+      Value: 5
+    buffType: 1
+    towerBuffType: 0
+    towerWeaponBuffType: 2
+    weaponDamageType: 1
+    enemyBuffType: 0

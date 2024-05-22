@@ -80,7 +80,7 @@ MonoBehaviour:
   weaponRange: 7.5
   attackRite: 0.3
   damage: 3
+  weaponDamageType: 1
   bulletPrefab: {fileID: 2807006958491565106, guid: c022329c47c048f4c8b054bf56682e9c, type: 3}
   bulletSpeed: 10
   firePoint: {fileID: 0}
-  _type: 0

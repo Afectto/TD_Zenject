@@ -16,3 +16,11 @@ MonoBehaviour:
     name: Armor_2
     skin: {fileID: 21300000, guid: 2a854d453da6004489981100a95f210e, type: 3}
     price: 1000
+  buffObject:
+    buffInfo:
+      Value: 10
+    buffType: 0
+    towerBuffType: 1
+    towerWeaponBuffType: 0
+    weaponDamageType: 0
+    enemyBuffType: 0

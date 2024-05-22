@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 public class Shop : MonoBehaviour, IListener
 {
     [Inject] private MoneyManager _moneyManager;
+    [Inject] private ResourcesLoader _resourcesLoader;
     [Inject] public EventManager EventManager { get; }
 
     [SerializeField] private Slot slotPrefab;
@@ -28,8 +29,8 @@ public class Shop : MonoBehaviour, IListener
     public void Initialize(DiContainer diContainer)
     {
         _container = diContainer;
-        _buffItems = Resources.LoadAll<ShopBuffItem>("ScriptableObject/ShopItem/BuffItem").ToList();
-        _weaponItems = Resources.LoadAll<ShopWeaponItem>("ScriptableObject/ShopItem/WeaponItem").ToList();
+        _buffItems = _resourcesLoader.ShopBuffItems;
+        _weaponItems = _resourcesLoader.ShopWeaponItems;
         
         _buffSlots = new List<Slot>();
         _weaponSlots = new List<Slot>();

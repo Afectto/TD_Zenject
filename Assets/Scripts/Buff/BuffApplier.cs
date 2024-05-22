@@ -6,37 +6,41 @@ using Zenject;
 
 public class BuffApplier: IDisposable
 {
+    [Inject] private ResourcesLoader _resourcesLoader;
     [Inject]public EventManager EventManager { get; }
 
     private Tower _tower;
     private int _towerId;
-    private List<BuffObject> _allBuffs;
+    
+    private List<ShopBuffItem> _shopBuffItems;
     
     [Inject]
     public void Initialize(Tower tower)
     {
         _tower = tower;
         _towerId = _tower.gameObject.GetInstanceID();
-        _allBuffs =  Resources.LoadAll<BuffObject>("ScriptableObject/BuffObject").ToList();
+        _shopBuffItems = _resourcesLoader.ShopBuffItems;
+
         EventManager.OnNeedCreatePurchasedItem += BuffAppliedByName;
     }
 
     private void BuffAppliedByName(string name)
     {
-        var buff = _allBuffs.Find(item => item.name == name);
+        var buffIndex = _shopBuffItems.FindIndex(item => item.name == name);
         
-        if(!buff) return;
-        
-        switch (buff.BuffType)
+        if(buffIndex == -1) return;
+
+        var buff = _shopBuffItems[buffIndex].buffObject;
+        switch (buff.buffType)
         {
             case BuffType.Tower:
-                    AppliedBuffByTower(buff.BuffInfo, buff.TowerBuffType);
+                    AppliedBuffByTower(buff.buffInfo, buff.towerBuffType);
                 break;
             case BuffType.TowerWeapon:
-                    AppliedBuffByTowerWeapon(buff.BuffInfo, buff.WeaponDamageType, buff.TowerWeaponBuffType);
+                    AppliedBuffByTowerWeapon(buff.buffInfo, buff.weaponDamageType, buff.towerWeaponBuffType);
                 break;
             case BuffType.Enemy:
-                    AppliedBuffByEnemy(buff.BuffInfo, buff.EnemyBuffType);
+                    AppliedBuffByEnemy(buff.buffInfo, buff.enemyBuffType);
                 break;
             default:
                 throw new ArgumentOutOfRangeException();

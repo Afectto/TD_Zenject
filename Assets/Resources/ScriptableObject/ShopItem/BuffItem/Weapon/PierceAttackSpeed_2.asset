@@ -16,3 +16,11 @@ MonoBehaviour:
     name: PierceAttackSpeed_2
     skin: {fileID: 21300000, guid: f49cd9a87863f214ab4ff5e309483f82, type: 3}
     price: 1000
+  buffObject:
+    buffInfo:
+      Value: 10
+    buffType: 1
+    towerBuffType: 0
+    towerWeaponBuffType: 1
+    weaponDamageType: 1
+    enemyBuffType: 0

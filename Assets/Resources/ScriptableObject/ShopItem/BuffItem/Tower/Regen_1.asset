@@ -16,3 +16,11 @@ MonoBehaviour:
     name: Regen_1
     skin: {fileID: 21300000, guid: 32482659d9613b24d99fbacd0f1462c5, type: 3}
     price: 500
+  buffObject:
+    buffInfo:
+      Value: 5
+    buffType: 0
+    towerBuffType: 3
+    towerWeaponBuffType: 0
+    weaponDamageType: 0
+    enemyBuffType: 0

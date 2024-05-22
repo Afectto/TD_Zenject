@@ -1013,8 +1013,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 753336510}
-  shop: {fileID: 817929498}
   moneyManager: {fileID: 613912309}
+  shop: {fileID: 817929498}
 --- !u!1001 &945030268
 PrefabInstance:
   m_ObjectHideFlags: 0

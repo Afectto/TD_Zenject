@@ -6,22 +6,24 @@ using Zenject;
 public class SpawnTowerWeapon : MonoBehaviour, IListener
 {
     [Inject] private TowerWeaponFactory _weaponFactory;
+    [Inject] private ResourcesLoader _resourcesLoader;
     [Inject] public EventManager EventManager { get; }
 
-    private List<WeaponObject> _weaponObjects;
+    private List<ShopWeaponItem> _shopWeaponItem;
     
     [Inject]
     public void Initialize()
     {
-        _weaponObjects = Resources.LoadAll<WeaponObject>("ScriptableObject/WeaponObject").ToList();
+        _shopWeaponItem = _resourcesLoader.ShopWeaponItems;
     }
 
     private void BuyItemInShop(string nameWeapon)
     {
-        var weaponObject = _weaponObjects.Find(item => item.Name == nameWeapon);
+        var weaponObject = _shopWeaponItem.Find(item => item.SlotData.Name == nameWeapon);
+        
         if (weaponObject)
         {
-            _weaponFactory.CreateWeapon(weaponObject.WeaponInfo);
+            _weaponFactory.CreateWeapon(weaponObject.weaponObject.WeaponInfo);
         }
     }
     

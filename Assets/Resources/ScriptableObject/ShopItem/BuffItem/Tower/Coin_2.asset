@@ -16,3 +16,11 @@ MonoBehaviour:
     name: Coin_2
     skin: {fileID: 21300000, guid: d5c78cdd27e5f51468725080cffe3f0a, type: 3}
     price: 1000
+  buffObject:
+    buffInfo:
+      Value: 750
+    buffType: 0
+    towerBuffType: 4
+    towerWeaponBuffType: 0
+    weaponDamageType: 0
+    enemyBuffType: 0

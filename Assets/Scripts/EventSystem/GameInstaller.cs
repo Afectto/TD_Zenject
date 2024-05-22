@@ -11,9 +11,7 @@ public class GameInstaller : MonoInstaller
     {
         BindInstance();
         
-        Container.Bind<EventManager>().AsSingle().NonLazy();
-        Container.Bind<BuffApplier>().AsSingle().NonLazy();
-        Container.Bind<TowerWeaponMultiplayer>().AsSingle().NonLazy();
+        BindSingle();
 
         BindFactory();
     }
@@ -23,6 +21,14 @@ public class GameInstaller : MonoInstaller
         Container.BindInstance(tower);
         Container.BindInstance(moneyManager);
         Container.BindInstance(shop);
+    }
+
+    private void BindSingle()
+    {
+        Container.Bind<EventManager>().AsSingle().NonLazy();
+        Container.Bind<BuffApplier>().AsSingle().NonLazy();
+        Container.Bind<TowerWeaponMultiplayer>().AsSingle().NonLazy();
+        Container.Bind<ResourcesLoader>().AsSingle().NonLazy();
     }
     
     private void BindFactory()

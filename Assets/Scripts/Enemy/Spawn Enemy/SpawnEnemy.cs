@@ -6,6 +6,7 @@ using Zenject;
 public class SpawnEnemy : MonoBehaviour
 {
     [Inject] private EnemyFactory _enemyFactory;
+    [Inject] private ResourcesLoader _resourcesLoader;
     
     private List<EnemyGroup> _enemyGroups;
     
@@ -21,8 +22,8 @@ public class SpawnEnemy : MonoBehaviour
     private void AddAllEnemyGroup()
     {
         _enemyGroups = new List<EnemyGroup>();
-        
-        var allEnemyGroup = Resources.LoadAll<EnemyGroup>("ScriptableObject/EnemyGroup");
+
+        var allEnemyGroup = _resourcesLoader.EnemyGroups;
         foreach (var grGroup in allEnemyGroup)
         {
             _enemyGroups.Add(grGroup);

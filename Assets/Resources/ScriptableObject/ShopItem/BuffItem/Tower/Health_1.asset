@@ -16,3 +16,11 @@ MonoBehaviour:
     name: Health_1
     skin: {fileID: 21300000, guid: 31079289432836542813ff987c6baefa, type: 3}
     price: 500
+  buffObject:
+    buffInfo:
+      Value: 500
+    buffType: 0
+    towerBuffType: 2
+    towerWeaponBuffType: 0
+    weaponDamageType: 0
+    enemyBuffType: 0
