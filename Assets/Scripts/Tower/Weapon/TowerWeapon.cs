@@ -52,7 +52,7 @@ public abstract class TowerWeapon : ShooterWeapon
 
     private void FindTarget()
     {
-        Utilities.DoForEachEnemyInRadius(transform.position, WeaponRange,enemyObject =>
+        Utilities.ForEachEnemyInRadius(transform.position, WeaponRange,enemyObject =>
         {
             SetTargetInstanceID(enemyObject.GetInstanceID(), enemyObject.transform);
         });

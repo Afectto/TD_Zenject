@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: SiegeAttackDamage_2
   m_EditorClassIdentifier: 
   slotData:
-    name: SiegeAttackDamage_1
-    skin: {fileID: 0}
-    price: 0
+    name: SiegeAttackDamage_2
+    skin: {fileID: 21300000, guid: e991f0ba4f80c574caedfa91c03dda4c, type: 3}
+    price: 1000
   buffObject:
     buffInfo:
       Value: 10

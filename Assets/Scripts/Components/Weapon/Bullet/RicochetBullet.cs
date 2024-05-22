@@ -39,7 +39,7 @@ public class RicochetBullet : BulletBase
 
         Enemy foundEnemy = null;
 
-        Utilities.DoForEachEnemyInRadius(center, radius,(enemyObject) =>
+        Utilities.ForEachEnemyInRadius(center, radius,(enemyObject) =>
         {
             Enemy enemy = enemyObject.GetComponentInParent<Enemy>();
             if (enemy.GetInstanceID() != targetEnemyID && foundEnemy == null)

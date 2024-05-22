@@ -11,7 +11,7 @@ public class SplashDamageBullet : BulletBase
     
     protected override void SetDamage()
     {
-        Utilities.DoForEachEnemyInRadius(transform.position, damageRadius,(enemyObject) =>
+        Utilities.ForEachEnemyInRadius(transform.position, damageRadius,(enemyObject) =>
         {
             InvokeSetDamage(enemyObject.GetInstanceID());
         });
