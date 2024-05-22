@@ -8,6 +8,7 @@ using Zenject;
 public abstract class Enemy : MonoBehaviour, IListener
 {
     [Inject] public EventManager EventManager { get;}
+    [SerializeField] private float reward;
     
     private Weapon _weapon;
     
@@ -50,6 +51,7 @@ public abstract class Enemy : MonoBehaviour, IListener
     {
         if (gameObject.GetInstanceID() == owner)
         {
+            EventManager?.TriggerOnRewardByEnemy(reward);
             Destroy(gameObject);
         }
     }

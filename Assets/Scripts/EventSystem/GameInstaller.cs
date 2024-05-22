@@ -4,14 +4,12 @@ using Zenject;
 public class GameInstaller : MonoInstaller
 {
     [SerializeField]private Tower tower; 
-    [SerializeField]private Shop shop; 
     [SerializeField]private MoneyManager moneyManager; 
-    
+    [SerializeField]private Shop shop; 
+
     public override void InstallBindings()
     {
-        Container.BindInstance(tower);
-        Container.BindInstance(moneyManager);
-        Container.BindInstance(shop);
+        BindInstance();
         
         Container.Bind<EventManager>().AsSingle().NonLazy();
         Container.Bind<BuffApplier>().AsSingle().NonLazy();
@@ -20,6 +18,13 @@ public class GameInstaller : MonoInstaller
         BindFactory();
     }
 
+    private void BindInstance()
+    {
+        Container.BindInstance(tower);
+        Container.BindInstance(moneyManager);
+        Container.BindInstance(shop);
+    }
+    
     private void BindFactory()
     {
         Container.Bind<EnemyFactory>().AsSingle().NonLazy();

@@ -55,7 +55,12 @@ public class EventManager
     {
         OnChangeMoney?.Invoke();
     }
-    
+
+    public event Action<float> OnRewardByEnemy; 
+    public void TriggerOnRewardByEnemy(float value)
+    {
+        OnRewardByEnemy?.Invoke(value);
+    }
     //UPDATE TIMER
     public event Action OnNeedUpdateShop;
     public void TriggerOnNeedUpdateShop()

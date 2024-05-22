@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f03afa226b6e28148971789636f60e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reward: 9
 --- !u!114 &1038698652808755946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,3 +116,4 @@ MonoBehaviour:
   weaponRange: 2
   attackRite: 0.75
   damage: 7
+  weaponDamageType: 0

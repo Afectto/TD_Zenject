@@ -4,7 +4,7 @@ using UnityEditor;
 [CustomEditor(typeof(BuffObject))]
 public class BuffObject_Editor : Editor
 {
-    private SerializedProperty _name;
+    // private SerializedProperty _name;
     private SerializedProperty _buffInfo;
     
     private SerializedProperty _buffType;
@@ -16,7 +16,7 @@ public class BuffObject_Editor : Editor
 
     private void OnEnable()
     {
-        _name = serializedObject.FindProperty("Name");
+        // _name = serializedObject.FindProperty("Name");
         _buffInfo = serializedObject.FindProperty("BuffInfo");
         
         _buffType = serializedObject.FindProperty("BuffType");
@@ -33,7 +33,7 @@ public class BuffObject_Editor : Editor
         
         serializedObject.Update();
         
-        EditorGUILayout.PropertyField(_name);
+        // EditorGUILayout.PropertyField(_name);
         
         EditorGUILayout.PropertyField(_buffType);
         

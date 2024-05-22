@@ -16,8 +16,8 @@ public abstract class TowerWeapon : ShooterWeapon
         _baseDamage = damage;
         _baseAttackRite = attackRite;
         
-        damage = _baseDamage * _weaponMultiplayer.GetDamageMultiplayer(weaponDamageType);
-        attackRite = _baseAttackRite * _weaponMultiplayer.GetAttackRiteMultiplayer(weaponDamageType);
+        AddDamage(weaponDamageType);
+        AddAttackRite(weaponDamageType);
     }
 
     public override void OnEnable()

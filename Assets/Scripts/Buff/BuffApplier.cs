@@ -23,7 +23,7 @@ public class BuffApplier: IDisposable
 
     private void BuffAppliedByName(string name)
     {
-        var buff = _allBuffs.Find(item => item.Name == name);
+        var buff = _allBuffs.Find(item => item.name == name);
         
         if(!buff) return;
         

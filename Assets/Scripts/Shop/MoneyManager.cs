@@ -37,6 +37,7 @@ public class MoneyManager :MonoBehaviour, IListener
         EventManager.OnBuyItemInShop += BuyItemInShop;
         EventManager.OnChangeMoney += UpdateMoneyText;
         EventManager.OnAddIncome += AddIncome;
+        EventManager.OnRewardByEnemy += AddMoney;
     }
 
     private void BuyItemInShop(int price)
@@ -66,5 +67,6 @@ public class MoneyManager :MonoBehaviour, IListener
         EventManager.OnBuyItemInShop -= BuyItemInShop;
         EventManager.OnChangeMoney -= UpdateMoneyText;
         EventManager.OnAddIncome -= AddIncome;
+        EventManager.OnRewardByEnemy -= AddMoney;
     }
 }

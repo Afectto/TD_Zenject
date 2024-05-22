@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using Zenject;
 
 public class TowerWeaponMultiplayer : IInitializable, IDisposable
@@ -18,8 +16,8 @@ public class TowerWeaponMultiplayer : IInitializable, IDisposable
     {
         _weaponMultiplayerByType = new Dictionary<WeaponDamageType, WeaponMultiplayerInfo>();
         WeaponDamageType[] enumValues = (WeaponDamageType[])Enum.GetValues(typeof(WeaponDamageType));
-        int count = enumValues.Length;
-        for (int i = 0; i < count; i++)
+        
+        for (int i = 0; i < enumValues.Length; i++)
         {
             _weaponMultiplayerByType.Add((WeaponDamageType)i, new WeaponMultiplayerInfo
             {
@@ -54,8 +52,7 @@ public class TowerWeaponMultiplayer : IInitializable, IDisposable
     {
         return _weaponMultiplayerByType[damageType].CurrentAttackRiteMultiplayer;
     }
-
-
+    
     public void Dispose()
     {
         EventManager.OnAddDamageBuffToTowerWeapon += AddDamage;

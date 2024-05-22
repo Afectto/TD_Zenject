@@ -1,10 +1,8 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "BuffObject", menuName = "GameInfo/New BuffObject")]
 public class BuffObject : ScriptableObject
 {
-    public string Name;
     public BuffInfo BuffInfo;
     
     public BuffType BuffType;
