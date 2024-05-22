@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
 using Zenject;
 
 public class BuffApplier: IDisposable
 {
-    [Inject] private ResourcesLoader _resourcesLoader;
+    [Inject]private ResourcesLoader _resourcesLoader;
     [Inject]public EventManager EventManager { get; }
 
     private Tower _tower;

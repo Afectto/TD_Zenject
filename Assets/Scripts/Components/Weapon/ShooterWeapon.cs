@@ -4,10 +4,12 @@ using UnityEngine;
 public abstract class ShooterWeapon : Weapon
 {
     [Space(15)]
-    [SerializeField] private Bullet bulletPrefab;
+    [SerializeField] private BulletBase bulletPrefab;
     [SerializeField] private float bulletSpeed;
     [SerializeField] private Transform firePoint;
-
+    
+    protected abstract void BulletOnSetDamage(IBullet bullet, int targetInstanceID);
+    
     protected override IEnumerator Attack()
     {
         while (true)
@@ -18,17 +20,18 @@ public abstract class ShooterWeapon : Weapon
         // ReSharper disable once IteratorNeverReturns
     }
     
-    protected void CreateBullet()
+    protected virtual IBullet CreateBullet()
     {
         var bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         bullet.OnSetDamage += BulletOnSetDamage;
         bullet.OnSetSpeedAndTarget(bulletSpeed, TargetTransform);
+
+        return bullet;
     }
 
-    private void BulletOnSetDamage(Bullet obj)
+    protected void BulletSetDamage(int targetInstanceID)
     {
-        obj.OnSetDamage -= BulletOnSetDamage;
-        EventManager.TriggerOnSetDamage(TargetInstanceID, damage);
+        EventManager.TriggerOnSetDamage(targetInstanceID, damage);
     }
 
     public void SetFirePoint(Transform point)

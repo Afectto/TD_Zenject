@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -77,13 +76,13 @@ public class Shop : MonoBehaviour, IListener
     
     private ShopBuffItem GetRandomBuffItem()
     {
-        var randomIndex = Random.Range(0, _buffItems.Count-1);
+        var randomIndex = Random.Range(0, _buffItems.Count);
         return _buffItems[randomIndex];
     }
 
     private ShopWeaponItem GetGetRandomWeaponItem()
     {
-        var randomIndex = Random.Range(0, _weaponItems.Count-1);
+        var randomIndex = Random.Range(0, _weaponItems.Count);
         return _weaponItems[randomIndex];
     }
 

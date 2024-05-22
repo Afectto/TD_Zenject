@@ -1,19 +1,19 @@
 using System;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public abstract class BulletBase : MonoBehaviour , IBullet
 {
     private float _speed;
-    private Transform _target;
+    protected Transform Target;
     private Vector3 _lastEnemyPosition;
+    public virtual event Action<IBullet, int> OnSetDamage;
+    public event Action<IBullet> onBulletDestroy;
 
-    public event Action<Bullet> OnSetDamage; 
-    
     public void Update()
     {
-        if (!_target || !_target.gameObject.activeSelf)
+        if (!Target || !Target.gameObject.activeSelf)
         {
-            _target = null;
+            Target = null;
             MoveBullet(_lastEnemyPosition);
             if (transform.position == _lastEnemyPosition)
             {
@@ -22,14 +22,14 @@ public class Bullet : MonoBehaviour
             return;
         }
 		
-        MoveBullet(_target.position);
+        MoveBullet(Target.position);
 		
         if (transform.position == _lastEnemyPosition)
         {
             SetDamage();
         }
     }
-    
+
     private void MoveBullet(Vector3 targetPosition)
     {
         var transformPosition = transform.position;
@@ -46,17 +46,28 @@ public class Bullet : MonoBehaviour
     public void OnSetSpeedAndTarget(float speed, Transform tar)
     {
         _speed = speed;
-        _target = tar;
+        Target = tar;
     }
-    
+
     protected virtual void SetDamage()
     {
-        OnSetDamage?.Invoke(this);
+        OnSetDamage?.Invoke(this, Target.gameObject.GetInstanceID());
         DestroyBullet();
     }
 
-    private void DestroyBullet()
+    protected void DestroyBullet()
     {
+        onBulletDestroy?.Invoke(this);
         Destroy(gameObject);
     }
+}
+
+public interface IBullet
+{
+    event Action<IBullet, int> OnSetDamage;
+    event Action<IBullet> onBulletDestroy;
+}
+
+public class Bullet : BulletBase
+{
 }

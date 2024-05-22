@@ -20,88 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="575b67b3-549f-4941-9f7c-781be809db8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Editor/ShopBuffItem_Editor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/BuffObject_Editor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/BuffObject_Editor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/ShopBuffItem_Editor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet/TowerArrow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet/TowerArrow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet/Variant/ArcherArrow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet/Variant/ArcherArrow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet/Variant/PriestArrow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet/Variant/PriestArrow.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tower/Weapon/Variant/ArrowWeapon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tower/Weapon/Variant/ArrowWeapon.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Armor_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Armor_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Armor_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Armor_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Armor_3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Armor_3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Coin_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Coin_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Coin_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Coin_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Coin_3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Coin_3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Coin_4.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Coin_4.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Health_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Health_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Health_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Health_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Health_3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Health_3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Health_4.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Health_4.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Regen_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Regen_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Regen_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Regen_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Regen_3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Tower/Regen_3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Weapon.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Weapon/PierceAttackDamage_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Weapon/PierceAttackDamage_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Weapon/PierceAttackDamage_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Weapon/PierceAttackDamage_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Weapon/PierceAttackDamage_3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Weapon/PierceAttackDamage_3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Weapon/PierceAttackSpeed_1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Weapon/PierceAttackSpeed_1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Weapon/PierceAttackSpeed_2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Weapon/PierceAttackSpeed_2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Weapon/PierceAttackSpeed_3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/BuffObject/Weapon/PierceAttackSpeed_3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Armor_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Armor_1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Armor_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Armor_2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Armor_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Armor_3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Coin_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Coin_1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Coin_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Coin_2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Coin_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Coin_3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Coin_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Coin_4.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Health_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Health_1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Health_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Health_2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Health_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Health_3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Health_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Health_4.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Regen_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Regen_1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Regen_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Regen_2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Regen_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Tower/Regen_3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Weapon/PierceAttackDamage_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Weapon/PierceAttackDamage_1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Weapon/PierceAttackDamage_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Weapon/PierceAttackDamage_2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Weapon/PierceAttackDamage_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Weapon/PierceAttackDamage_3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Weapon/PierceAttackSpeed_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Weapon/PierceAttackSpeed_1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Weapon/PierceAttackSpeed_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Weapon/PierceAttackSpeed_2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Weapon/PierceAttackSpeed_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/BuffItem/Weapon/PierceAttackSpeed_3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/WeaponObject.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/WeaponObject/Arrow.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/WeaponObject/Arrow.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/WeaponItem/Arrow.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/ShopItem/WeaponItem/Arrow.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buff/BuffApplier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buff/BuffApplier.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Info/EnemyBuffType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Info/EnemyBuffType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Info/TowerBuffType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Info/TowerBuffType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Info/TowerWeaponBuffType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Info/TowerWeaponBuffType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Info/WeaponDamageType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Info/WeaponDamageType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/Object/BuffObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/Object/BuffObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/Object/WeaponObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/Object/WeaponObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/Shop/ShopBuffItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/Shop/ShopBuffItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/Shop/ShopWeaponItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/Shop/ShopWeaponItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Info/Buff/ShopBuffObject/BuffObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Info/Buff/ShopBuffObject/BuffObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Info/Buff/ShopBuffObject/WeaponObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Info/Buff/ShopBuffObject/WeaponObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/ResourcesLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/ResourcesLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Weapon/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Weapon/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Weapon/ShooterWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Weapon/ShooterWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyShooterWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyShooterWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tower/ArrowWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tower/ArrowWeapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/SpawnTowerWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/SpawnTowerWeapon.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,11 +52,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C5ED7824-3908-4EF1-BC2A-D85EEC89E9FE/dd/50791250/RectTransform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1899C5BD-2A6D-4660-81CD-705BEE01D689/67/a0b54762/EditorStyles.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Info/GlobalTimer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Weapon/RicochetBullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C5ED7824-3908-4EF1-BC2A-D85EEC89E9FE/56/be19ea8d/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5A41D6B7-1898-42EC-A409-FD0B1C3E3DCF/0/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B11BA2A8-FBF2-4F21-9F7C-C98532A11304/0d/6a8085a7/RuntimeMethodInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buff/BuffApplier.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Info/UpdateTimer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/79A7B2C7-0050-43D7-BA49-637CE6EAE1BD/47/497370ef/IMGUIContainer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B11BA2A8-FBF2-4F21-9F7C-C98532A11304/73/f8288e52/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B11BA2A8-FBF2-4F21-9F7C-C98532A11304/70/eac058b0/RuntimeConstructorInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1899C5BD-2A6D-4660-81CD-705BEE01D689/86/84fd0175/SerializedProperty.cs" root0="SKIP_HIGHLIGHTING" />
@@ -131,21 +69,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1899C5BD-2A6D-4660-81CD-705BEE01D689/28/84492f09/PropertyHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/TowerWeaponMultiplayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C5ED7824-3908-4EF1-BC2A-D85EEC89E9FE/3c/2d5b1f23/PropertyAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tower/RicochetWeapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C5ED7824-3908-4EF1-BC2A-D85EEC89E9FE/6b/2eb17bf8/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shop/Slot.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn Enemy/EnemyFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tower/TowerWeaponSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/EnemyGroup/EnemyGroup.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/SlotData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/ShopBuffItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Info/WeaponInfo.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/ShopItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Info/SlotData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/ShopWeaponItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/WeaponObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/UpdateTimer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tower/SpawnTowerWeapon.cs" />
@@ -161,7 +91,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/MoveToTarget.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/Object/BuffObjectDrawer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Health.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tower/ArrowWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Info/WeaponInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Weapon/Weapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/TowerWeaponMultiplaer.cs" />
@@ -173,8 +102,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EventSystem/EventManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Shop/MoneyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EventSystem/GameInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Info/BuffInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/Shop/ShopBuffItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/BuffObject_Editor.cs" />
@@ -183,11 +110,23 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Info/TowerWeaponBuffType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Info/WeaponDamageType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Info/EnemyBuffType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Buff/BuffApplier.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/Shop/ShopWeaponItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/Object/WeaponObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/SpawnTowerWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/ShopBuffItem_Editor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/ShopWeaponItem_Editor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ResourcesLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn Enemy/SpawnEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EventSystem/GameInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/SpawnTowerWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/ResourcesLoader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buff/BuffApplier.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Weapon/ShooterWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tower/RicochetWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Weapon/Bullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Weapon/RicochetBullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tower/ArrowWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyShooterWeapon.cs" />
       </list>
     </option>
   </component>
@@ -245,7 +184,7 @@
       <updated>1714813290459</updated>
       <workItem from="1714813292710" duration="25313000" />
       <workItem from="1715500464709" duration="12687000" />
-      <workItem from="1716019813443" duration="57686000" />
+      <workItem from="1716019813443" duration="64295000" />
     </task>
     <servers />
   </component>
@@ -270,74 +209,74 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="505" height="464" key="DebuggerActiveHint" timestamp="1716365773798">
+    <state width="505" height="464" key="DebuggerActiveHint" timestamp="1716374355663">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="505" height="464" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1716365773798" />
-    <state width="1877" height="248" key="GridCell.Tab.0.bottom" timestamp="1716365738849">
+    <state width="505" height="464" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1716374355663" />
+    <state width="1877" height="248" key="GridCell.Tab.0.bottom" timestamp="1716374303626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1716365738849" />
-    <state width="1877" height="248" key="GridCell.Tab.0.center" timestamp="1716365738849">
+    <state width="1877" height="248" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1716374303626" />
+    <state width="1877" height="248" key="GridCell.Tab.0.center" timestamp="1716374303626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1716365738849" />
-    <state width="1877" height="248" key="GridCell.Tab.0.left" timestamp="1716365738849">
+    <state width="1877" height="248" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1716374303626" />
+    <state width="1877" height="248" key="GridCell.Tab.0.left" timestamp="1716374303626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1716365738849" />
-    <state width="1877" height="248" key="GridCell.Tab.0.right" timestamp="1716365738849">
+    <state width="1877" height="248" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1716374303626" />
+    <state width="1877" height="248" key="GridCell.Tab.0.right" timestamp="1716374303626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1716365738849" />
-    <state width="1877" height="248" key="GridCell.Tab.1.bottom" timestamp="1716365742930">
+    <state width="1877" height="248" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1716374303626" />
+    <state width="1877" height="248" key="GridCell.Tab.1.bottom" timestamp="1716374309492">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1716365742930" />
-    <state width="1877" height="248" key="GridCell.Tab.1.center" timestamp="1716365742930">
+    <state width="1877" height="248" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1716374309492" />
+    <state width="1877" height="248" key="GridCell.Tab.1.center" timestamp="1716374309492">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1716365742930" />
-    <state width="1877" height="248" key="GridCell.Tab.1.left" timestamp="1716365742930">
+    <state width="1877" height="248" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1716374309492" />
+    <state width="1877" height="248" key="GridCell.Tab.1.left" timestamp="1716374309492">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1716365742930" />
-    <state width="1877" height="248" key="GridCell.Tab.1.right" timestamp="1716365742930">
+    <state width="1877" height="248" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1716374309492" />
+    <state width="1877" height="248" key="GridCell.Tab.1.right" timestamp="1716374309492">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1716365742930" />
-    <state width="1877" height="248" key="GridCell.Tab.2.bottom" timestamp="1716365738780">
+    <state width="1877" height="248" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1716374309492" />
+    <state width="1877" height="248" key="GridCell.Tab.2.bottom" timestamp="1716374303545">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1716365738780" />
-    <state width="1877" height="248" key="GridCell.Tab.2.center" timestamp="1716365738780">
+    <state width="1877" height="248" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1716374303545" />
+    <state width="1877" height="248" key="GridCell.Tab.2.center" timestamp="1716374303545">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1716365738780" />
-    <state width="1877" height="248" key="GridCell.Tab.2.left" timestamp="1716365738780">
+    <state width="1877" height="248" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1716374303545" />
+    <state width="1877" height="248" key="GridCell.Tab.2.left" timestamp="1716374303545">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1716365738780" />
-    <state width="1877" height="248" key="GridCell.Tab.2.right" timestamp="1716365738780">
+    <state width="1877" height="248" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1716374303545" />
+    <state width="1877" height="248" key="GridCell.Tab.2.right" timestamp="1716374303545">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1716365738780" />
-    <state width="1877" height="248" key="GridCell.Tab.3.bottom" timestamp="1716365738780">
+    <state width="1877" height="248" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1716374303545" />
+    <state width="1877" height="248" key="GridCell.Tab.3.bottom" timestamp="1716374303545">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1716365738780" />
-    <state width="1877" height="248" key="GridCell.Tab.3.center" timestamp="1716365738780">
+    <state width="1877" height="248" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1716374303545" />
+    <state width="1877" height="248" key="GridCell.Tab.3.center" timestamp="1716374303545">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1716365738780" />
-    <state width="1877" height="248" key="GridCell.Tab.3.left" timestamp="1716365738780">
+    <state width="1877" height="248" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1716374303545" />
+    <state width="1877" height="248" key="GridCell.Tab.3.left" timestamp="1716374303545">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1716365738780" />
-    <state width="1877" height="248" key="GridCell.Tab.3.right" timestamp="1716365738780">
+    <state width="1877" height="248" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1716374303545" />
+    <state width="1877" height="248" key="GridCell.Tab.3.right" timestamp="1716374303545">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1716365738780" />
+    <state width="1877" height="248" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1716374303545" />
     <state x="788" y="205" key="RiderGenerateDialog" timestamp="1716222913879">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -346,10 +285,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1716212724632" />
-    <state x="1111" y="182" width="785" height="564" key="find.popup" timestamp="1716364819138">
+    <state x="1111" y="182" width="785" height="564" key="find.popup" timestamp="1716375420046">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1111" y="182" width="785" height="564" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1716364819138" />
+    <state x="1111" y="182" width="785" height="564" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1716375420046" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1714830095346">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -385,30 +324,30 @@
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Buff/BuffApplier.cs</url>
-          <line>31</line>
-          <properties documentPath="D:\UnityProgram\TD_Zenject\Assets\Scripts\Buff\BuffApplier.cs" initialLine="36">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Components/Weapon/RicochetBullet.cs</url>
+          <line>18</line>
+          <properties documentPath="D:\UnityProgram\TD_Zenject\Assets\Scripts\Components\Weapon\RicochetBullet.cs" initialLine="20">
             <startOffsets>
-              <option value="810" />
+              <option value="402" />
             </startOffsets>
             <endOffsets>
-              <option value="858" />
+              <option value="463" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="54" />
+          <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Editor/ShopBuffItem_Editor.cs</url>
-          <line>69</line>
-          <properties documentPath="D:\UnityProgram\TD_Zenject\Assets\Editor\ShopBuffItem_Editor.cs" initialLine="69">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Tower/RicochetWeapon.cs</url>
+          <line>4</line>
+          <properties documentPath="D:\UnityProgram\TD_Zenject\Assets\Scripts\Tower\RicochetWeapon.cs" initialLine="4">
             <startOffsets>
-              <option value="2257" />
+              <option value="109" />
             </startOffsets>
             <endOffsets>
-              <option value="2339" />
+              <option value="142" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="55" />
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
