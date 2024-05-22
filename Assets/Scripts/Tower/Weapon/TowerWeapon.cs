@@ -52,14 +52,10 @@ public abstract class TowerWeapon : ShooterWeapon
 
     private void FindTarget()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, WeaponRange);
-        foreach (Collider2D collider in colliders)
+        Utilities.DoForEachEnemyInRadius(transform.position, WeaponRange,enemyObject =>
         {
-            if (collider.CompareTag("Enemy"))
-            {
-                SetTargetInstanceID(collider.gameObject.GetInstanceID(), collider.transform);
-            }
-        }
+            SetTargetInstanceID(enemyObject.GetInstanceID(), enemyObject.transform);
+        });
     }
 
     protected override IEnumerator Attack()

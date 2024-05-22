@@ -9,7 +9,7 @@ public abstract class BulletBase : MonoBehaviour , IBullet
     protected Transform Target;
     
     protected event Action onEndMoveBulletToDeadTarget;
-    public virtual event Action<IBullet, int> OnSetDamage;
+    public event Action<IBullet, int> OnSetDamage;
     public event Action<IBullet> onBulletDestroy;
 
     public void Update()

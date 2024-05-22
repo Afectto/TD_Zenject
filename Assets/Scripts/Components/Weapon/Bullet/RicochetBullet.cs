@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class RicochetBullet : BulletBase
@@ -7,8 +6,6 @@ public class RicochetBullet : BulletBase
     [SerializeField] private float chainRadius;
     private int _ricochetLeft;
 
-    public override event Action<IBullet, int> OnSetDamage;
-
     private void Awake()
     {
         _ricochetLeft = maxRicochetCount;
@@ -16,7 +13,7 @@ public class RicochetBullet : BulletBase
 
     protected override void SetDamage()
     {
-        OnSetDamage?.Invoke(this, Target.gameObject.GetInstanceID());
+        InvokeSetDamage(Target.gameObject.GetInstanceID());
         if (_ricochetLeft > 0)
         {
             _ricochetLeft--;
@@ -37,22 +34,21 @@ public class RicochetBullet : BulletBase
     
     private Enemy FindEnemyInRadius(Vector3 center, float radius)
     {
-        Collider2D[] allColliders = Physics2D.OverlapCircleAll(center, radius);
-        var targetEnemy = Target.GetComponentInParent<Enemy>();
-        var targetEnemyID = targetEnemy.GetInstanceID();
-        
-        for (int i = 0; i < allColliders.Length; i++)
-        {
-            if (allColliders[i].CompareTag("Enemy"))
-            {
-                var enemy = allColliders[i].GetComponentInParent<Enemy>();
-                if (enemy.GetInstanceID() != targetEnemyID)
-                {
-                    return enemy;
-                }
-            }
-        }
+        Enemy targetEnemy = Target.GetComponentInParent<Enemy>();
+        int targetEnemyID = targetEnemy.GetInstanceID();
 
-        return null;
+        Enemy foundEnemy = null;
+
+        Utilities.DoForEachEnemyInRadius(center, radius,(enemyObject) =>
+        {
+            Enemy enemy = enemyObject.GetComponentInParent<Enemy>();
+            if (enemy.GetInstanceID() != targetEnemyID && foundEnemy == null)
+            {
+                foundEnemy = enemy;
+            }
+        });
+
+        return foundEnemy;
     }
+    
 }

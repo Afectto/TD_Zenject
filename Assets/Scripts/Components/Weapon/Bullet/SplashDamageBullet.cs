@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class SplashDamageBullet : BulletBase
@@ -12,14 +11,10 @@ public class SplashDamageBullet : BulletBase
     
     protected override void SetDamage()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, damageRadius);
-        foreach (Collider2D collider in colliders)
+        Utilities.DoForEachEnemyInRadius(transform.position, damageRadius,(enemyObject) =>
         {
-            if (collider.CompareTag("Enemy"))
-            {
-                InvokeSetDamage(collider.gameObject.GetInstanceID());
-            }
-        }
+            InvokeSetDamage(enemyObject.GetInstanceID());
+        });
 
         DestroyBullet();
     }
