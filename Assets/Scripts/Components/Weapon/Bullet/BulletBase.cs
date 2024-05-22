@@ -4,8 +4,11 @@ using UnityEngine;
 public abstract class BulletBase : MonoBehaviour , IBullet
 {
     private float _speed;
-    protected Transform Target;
     private Vector3 _lastEnemyPosition;
+    
+    protected Transform Target;
+    
+    protected event Action onEndMoveBulletToDeadTarget;
     public virtual event Action<IBullet, int> OnSetDamage;
     public event Action<IBullet> onBulletDestroy;
 
@@ -17,6 +20,7 @@ public abstract class BulletBase : MonoBehaviour , IBullet
             MoveBullet(_lastEnemyPosition);
             if (transform.position == _lastEnemyPosition)
             {
+                onEndMoveBulletToDeadTarget?.Invoke();
                 DestroyBullet();
             }
             return;

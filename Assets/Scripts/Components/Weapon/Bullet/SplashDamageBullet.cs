@@ -1,10 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class SplashDamageBullet : BulletBase
 {
     [SerializeField] private float damageRadius;
+
+    public void OnEnable()
+    {
+        onEndMoveBulletToDeadTarget += SetDamage;
+    }
     
     protected override void SetDamage()
     {
@@ -18,5 +22,10 @@ public class SplashDamageBullet : BulletBase
         }
 
         DestroyBullet();
+    }
+    
+    public void OnDisable()
+    {
+        onEndMoveBulletToDeadTarget -= SetDamage;
     }
 }

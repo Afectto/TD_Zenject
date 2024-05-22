@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: SplashStoneWeapon
   m_EditorClassIdentifier: 
   slotData:
-    name: 
-    skin: {fileID: 0}
-    price: 0
+    name: SplashStoneWeapon
+    skin: {fileID: 21300000, guid: 6e97cf95b66f279458bc3e7042977756, type: 3}
+    price: 1000
   weaponObject:
     WeaponInfo:
-      prefab: {fileID: 0}
+      prefab: {fileID: 4573737102267037499, guid: 7b56ebf0630ea2940b8bc7e3df2e0e71, type: 3}

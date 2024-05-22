@@ -18,4 +18,4 @@ MonoBehaviour:
     price: 500
   weaponObject:
     WeaponInfo:
-      prefab: {fileID: 8906416418935643270, guid: a57d68ce8efe7f5498e85b2e1150789f, type: 3}
+      prefab: {fileID: 6724152205398931642, guid: d5add1d1c03e33b4b92ff22c2ad1ddda, type: 3}
