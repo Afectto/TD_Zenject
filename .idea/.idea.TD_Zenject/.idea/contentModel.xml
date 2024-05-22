@@ -965,6 +965,7 @@
               </e>
             </e>
             <e p="Interface" t="Include">
+              <e p="IBullet.cs" t="Include" />
               <e p="IListener.cs" t="Include" />
             </e>
             <e p="MoveToTarget.cs" t="Include" />
@@ -972,9 +973,13 @@
             <e p="ResourcesLoader.cs" t="Include" />
             <e p="Timer.cs" t="Include" />
             <e p="Weapon" t="Include">
-              <e p="Bullet.cs" t="Include" />
+              <e p="Bullet" t="Include">
+                <e p="Bullet.cs" t="Include" />
+                <e p="BulletBase.cs" t="Include" />
+                <e p="RicochetBullet.cs" t="Include" />
+                <e p="SplashDamageBullet.cs" t="Include" />
+              </e>
               <e p="MeleeWeapon.cs" t="Include" />
-              <e p="RicochetBullet.cs" t="Include" />
               <e p="ShooterWeapon.cs" t="Include" />
               <e p="Weapon.cs" t="Include" />
             </e>

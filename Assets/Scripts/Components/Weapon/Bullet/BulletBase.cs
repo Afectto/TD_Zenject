@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 public abstract class BulletBase : MonoBehaviour , IBullet
@@ -51,23 +51,18 @@ public abstract class BulletBase : MonoBehaviour , IBullet
 
     protected virtual void SetDamage()
     {
-        OnSetDamage?.Invoke(this, Target.gameObject.GetInstanceID());
+        InvokeSetDamage(Target.gameObject.GetInstanceID());
         DestroyBullet();
     }
 
+    protected void InvokeSetDamage(int targetInstanceId)
+    {
+        OnSetDamage?.Invoke(this, targetInstanceId);
+    }
+    
     protected void DestroyBullet()
     {
         onBulletDestroy?.Invoke(this);
         Destroy(gameObject);
     }
-}
-
-public interface IBullet
-{
-    event Action<IBullet, int> OnSetDamage;
-    event Action<IBullet> onBulletDestroy;
-}
-
-public class Bullet : BulletBase
-{
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using Zenject;
 
-[DisallowMultipleComponent]
+// [DisallowMultipleComponent]
 public abstract class Weapon : MonoBehaviour, IListener
 {
     [Inject] public EventManager EventManager { get;}

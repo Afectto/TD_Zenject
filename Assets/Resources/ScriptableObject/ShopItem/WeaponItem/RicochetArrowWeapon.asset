@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d04c7f5c8f954bccb2855108deb9860b, type: 3}
-  m_Name: Arrow
+  m_Name: RicochetArrowWeapon
   m_EditorClassIdentifier: 
   slotData:
-    name: Arrow
-    skin: {fileID: 21300000, guid: 55d7ccd2eaecd284b98564474aa40098, type: 3}
+    name: RicochetArrowWeapon
+    skin: {fileID: 21300000, guid: 68981de651f8ffb4faa1151e32c7b3e4, type: 3}
     price: 500
   weaponObject:
     WeaponInfo:
-      prefab: {fileID: 163425017212884129, guid: 7bf9bcf127d558446aa0e88ac7cd2b6d, type: 3}
+      prefab: {fileID: 8906416418935643270, guid: a57d68ce8efe7f5498e85b2e1150789f, type: 3}
