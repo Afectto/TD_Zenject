@@ -52,6 +52,11 @@ public class Armor : IInitializable
         float armorMultiplier = _armorReduction[weaponDamageType].ArmorMultiplier[armorType];
         float damageResults = damage * armorMultiplier;
         
+        return CalculateDamageReduction(armorValue, damageResults);
+    }
+
+    public float CalculateDamageReduction(float armorValue, float damageResults)
+    {
         if (armorValue > 0)
         {
             float damageReduction = (armorValue * 0.06f) / (1 + 0.06f * armorValue);

@@ -2,6 +2,7 @@ using UnityEngine;
 using Zenject;
 
 [RequireComponent(typeof(Health))]
+[RequireComponent(typeof(ArmorBehaviour))]
 public class Tower : MonoBehaviour, IListener
 {
     [Inject] public EventManager EventManager { get;}

@@ -17,7 +17,8 @@ public class Health : MonoBehaviour, IListener
     private int _ownerID;
     private float _currentHealth;
     private float _regenPerSecond;
-    
+    private ArmorBehaviour _armorBehaviour;
+
     private float CurrentHealth
     {
         get => _currentHealth;
@@ -32,6 +33,8 @@ public class Health : MonoBehaviour, IListener
     {
         _owner = gameObject;
         _ownerID = _owner.GetInstanceID();
+        
+        _armorBehaviour = GetComponent<ArmorBehaviour>();
         CurrentHealth = maxHealth;
         _regenPerSecond = 0;
         textHealth.gameObject.SetActive(isShowText);
@@ -55,7 +58,7 @@ public class Health : MonoBehaviour, IListener
         }
         else
         {
-            EventManager.OnSetDamage += SetDamage;
+            EventManager.OnSetDamage += SetDamageToTower;
         }
     }
 
@@ -69,7 +72,7 @@ public class Health : MonoBehaviour, IListener
         }
         else
         {
-            EventManager.OnSetDamage -= SetDamage;
+            EventManager.OnSetDamage -= SetDamageToTower;
         }
     }
     #endregion
@@ -80,9 +83,29 @@ public class Health : MonoBehaviour, IListener
 
         if (_ownerID == owner)
         {
-            var armorBehaviour = GetComponent<ArmorBehaviour>();
-            var damageReducedByArmor = armorBehaviour.GetDamageReducedByArmor(damage, weaponDamageType);
+            var damageReducedByArmor = _armorBehaviour.GetDamageReducedByArmor(damage, weaponDamageType);
             SetDamage(damageReducedByArmor);
+        }
+    }
+
+    private void SetDamageToTower(int target, float damage)
+    {
+        if(damage <= 0 ) return;
+        
+        if (_ownerID == target)
+        {
+            var damageReducedByArmor = _armorBehaviour.GetDamageReducedByArmor(damage);
+            SetDamage(damageReducedByArmor);
+        }
+    }
+
+    private void SetDamage(float damage)
+    {
+        CurrentHealth -= damage;
+        if (CurrentHealth <= 0)
+        {
+            CurrentHealth = 0;
+            EventManager?.TriggerOnDeath(_ownerID);
         }
     }
 
@@ -108,26 +131,6 @@ public class Health : MonoBehaviour, IListener
         // ReSharper disable once IteratorNeverReturns
     }
 
-    private void SetDamage(int target, float damage)
-    {
-        if(damage <= 0 ) return;
-        
-        if (_ownerID == target)
-        {
-            SetDamage(damage);
-        }
-    }
-
-    private void SetDamage(float damage)
-    {
-        CurrentHealth -= damage;
-        if (CurrentHealth <= 0)
-        {
-            CurrentHealth = 0;
-            EventManager?.TriggerOnDeath(_ownerID);
-        }
-    }
-    
     private void AddHealth(float value)
     {
         CurrentHealth += value;
