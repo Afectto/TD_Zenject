@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using Unity.Collections;
 using Unity.Jobs;
 using UnityEngine;
@@ -7,6 +8,7 @@ using IJob = Unity.Jobs.IJob;
 
 public abstract class TowerWeapon : ShooterWeapon
 {
+    [Inject] private Armor _armor;
     [Inject] private TowerWeaponMultiplayer _weaponMultiplayer;
     
     private float _baseDamage;
@@ -55,42 +57,60 @@ public abstract class TowerWeapon : ShooterWeapon
     
     private void FindTarget()
     {
-        var enemyList = Utils.GetAllTagObjectInRadius("Enemy", transform.position, WeaponRange);
-        NativeArray<Vector3> enemyPositions = new NativeArray<Vector3>(enemyList.Count, Allocator.TempJob);
-        NativeArray<Vector3> targetPosition = new NativeArray<Vector3>(1, Allocator.TempJob);
-        
-        for (int i = 0; i < enemyList.Count; i++)
-        {
-            enemyPositions[i] = enemyList[i].transform.position;
-        }
-        
-        FindTargetJob job = new FindTargetJob
-        {
-            enemyPositions = enemyPositions,
-            targetPosition = targetPosition,
-        };
-
-        JobHandle jobHandle = job.Schedule();
-        jobHandle.Complete();
-        
-        Vector3 finalTargetPosition = targetPosition[0];
-        
-        enemyPositions.Dispose();
-        targetPosition.Dispose();
-        
-        foreach (var enemy in enemyList)
-        {
-            if (enemy.transform.position == finalTargetPosition)
-            {
-                SetTargetInstanceID(enemy.GetInstanceID(), enemy.transform);
-                return;
-            }
-        }
-        
-        // Utils.ForEachEnemyInRadius(transform.position, WeaponRange,enemyObject =>
+        // var enemyList = Utils.GetAllTagObjectInRadius("Enemy", transform.position, WeaponRange);
+        // NativeArray<Vector3> enemyPositions = new NativeArray<Vector3>(enemyList.Count, Allocator.TempJob);
+        // NativeArray<Vector3> targetPosition = new NativeArray<Vector3>(1, Allocator.TempJob);
+        //
+        // for (int i = 0; i < enemyList.Count; i++)
         // {
-        //     SetTargetInstanceID(enemyObject.GetInstanceID(), enemyObject.transform);
-        // });
+        //     enemyPositions[i] = enemyList[i].transform.position;
+        // }
+        //
+        // FindTargetJob job = new FindTargetJob
+        // {
+        //     enemyPositions = enemyPositions,
+        //     targetPosition = targetPosition,
+        // };
+        //
+        // JobHandle jobHandle = job.Schedule();
+        // jobHandle.Complete();
+        //
+        // Vector3 finalTargetPosition = targetPosition[0];
+        //
+        // enemyPositions.Dispose();
+        // targetPosition.Dispose();
+        //
+        // foreach (var enemy in enemyList)
+        // {
+        //     if (enemy.transform.position == finalTargetPosition)
+        //     {
+        //         SetTargetInstanceID(enemy.GetInstanceID(), enemy.transform);
+        //         return;
+        //     }
+        // }
+        GameObject closestEnemy = null;
+        float highestDamage = 0.0f;
+        float closestDistance = float.MaxValue;
+        
+        Utils.ForEachEnemyInRadius(transform.position, WeaponRange,enemyObject =>
+        {
+            var armor = enemyObject.GetComponent<ArmorBehaviour>();
+            var damageToEnemy = _armor.CalculateDamage(damage, weaponDamageType, armor.ArmorType, armor.Armor);
+     
+            float distanceToEnemy = Vector3.Distance(transform.position, enemyObject.transform.position);
+    
+            if (damageToEnemy > highestDamage || (damageToEnemy == highestDamage && distanceToEnemy < closestDistance))
+            {
+                closestEnemy = enemyObject;
+                highestDamage = damageToEnemy;
+                closestDistance = distanceToEnemy;
+            }
+        });
+
+        if (closestEnemy)
+        {
+            SetTargetInstanceID(closestEnemy.GetInstanceID(), closestEnemy.transform);
+        }
     }
 
     protected override IEnumerator Attack()
