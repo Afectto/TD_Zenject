@@ -98,8 +98,16 @@ public abstract class TowerWeapon : ShooterWeapon
             var damageToEnemy = _armor.CalculateDamage(damage, weaponDamageType, armor.ArmorType, armor.Armor);
      
             float distanceToEnemy = Vector3.Distance(transform.position, enemyObject.transform.position);
-    
-            if (damageToEnemy > highestDamage || (damageToEnemy == highestDamage && distanceToEnemy < closestDistance))
+            var randomValue = Random.Range(0, 10000);
+            var variantFindEnemy = distanceToEnemy < closestDistance ||
+                                        (distanceToEnemy == closestDistance && highestDamage < damageToEnemy);//More Priority Closest
+            if (randomValue < 5000)
+            {
+                variantFindEnemy = highestDamage < damageToEnemy ||
+                                   (highestDamage == damageToEnemy && distanceToEnemy < closestDistance); //More Priority Damage
+            }
+            
+            if (variantFindEnemy)
             {
                 closestEnemy = enemyObject;
                 highestDamage = damageToEnemy;
@@ -127,7 +135,7 @@ public abstract class TowerWeapon : ShooterWeapon
                 FindTarget();
             }
 
-            yield return null;
+            yield return new WaitForSeconds(0.1f);;
         }
         // ReSharper disable once IteratorNeverReturns
     }
@@ -138,28 +146,28 @@ public abstract class TowerWeapon : ShooterWeapon
     }
 }
 
-[BurstCompatible]
-public struct FindTargetJob : IJob
-{
-    [ReadOnly]
-    public NativeArray<Vector3> enemyPositions;
-    public NativeArray<Vector3> targetPosition;
-    
-    public void Execute()
-    {
-        Vector3 nearestEnemyPos = Vector3.zero;
-        float closestDistance = float.MaxValue;
-
-        for (int i = 0; i < enemyPositions.Length; i++)
-        {
-            float distance = Vector3.Distance(enemyPositions[i], targetPosition[0]);
-            if (distance < closestDistance)
-            {
-                closestDistance = distance;
-                nearestEnemyPos = enemyPositions[i];
-            }
-        }
-
-        targetPosition[0] = nearestEnemyPos;
-    }
-}
+// [BurstCompatible]
+// public struct FindTargetJob : IJob
+// {
+//     [ReadOnly]
+//     public NativeArray<Vector3> enemyPositions;
+//     public NativeArray<Vector3> targetPosition;
+//     
+//     public void Execute()
+//     {
+//         Vector3 nearestEnemyPos = Vector3.zero;
+//         float closestDistance = float.MaxValue;
+//
+//         for (int i = 0; i < enemyPositions.Length; i++)
+//         {
+//             float distance = Vector3.Distance(enemyPositions[i], targetPosition[0]);
+//             if (distance < closestDistance)
+//             {
+//                 closestDistance = distance;
+//                 nearestEnemyPos = enemyPositions[i];
+//             }
+//         }
+//
+//         targetPosition[0] = nearestEnemyPos;
+//     }
+// }

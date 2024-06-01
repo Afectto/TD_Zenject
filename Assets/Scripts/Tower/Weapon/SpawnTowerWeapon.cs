@@ -18,7 +18,23 @@ public class SpawnTowerWeapon : MonoBehaviour, IListener
         // var weaponObject = _shopWeaponItem.Find(item => item.SlotData.Name == "Arrow");
         // if (weaponObject)
         // {
-        //     for (int i = 0; i < 10000; i++)
+        //     for (int i = 0; i < 25; i++)
+        //     {
+        //         _weaponFactory.CreateWeapon(weaponObject.weaponObject.WeaponInfo);
+        //     }
+        // }
+        // weaponObject = _shopWeaponItem.Find(item => item.SlotData.Name == "RicochetArrowWeapon");
+        // if (weaponObject)
+        // {
+        //     for (int i = 0; i < 25; i++)
+        //     {
+        //         _weaponFactory.CreateWeapon(weaponObject.weaponObject.WeaponInfo);
+        //     }
+        // }
+        // weaponObject = _shopWeaponItem.Find(item => item.SlotData.Name == "SplashStoneWeapon");
+        // if (weaponObject)
+        // {
+        //     for (int i = 0; i < 50; i++)
         //     {
         //         _weaponFactory.CreateWeapon(weaponObject.weaponObject.WeaponInfo);
         //     }
