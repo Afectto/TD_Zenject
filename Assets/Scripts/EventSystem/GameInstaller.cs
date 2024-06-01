@@ -5,12 +5,12 @@ public class GameInstaller : MonoInstaller
 {
     [SerializeField]private Tower tower; 
     [SerializeField]private MoneyManager moneyManager; 
-    [SerializeField]private Shop shop; 
+    [SerializeField]private Shop shop;
 
     public override void InstallBindings()
     {
         BindInstance();
-        
+
         BindSingle();
 
         BindFactory();
@@ -29,6 +29,7 @@ public class GameInstaller : MonoInstaller
         Container.Bind<BuffApplier>().AsSingle().NonLazy();
         Container.Bind<TowerWeaponMultiplayer>().AsSingle().NonLazy();
         Container.Bind<ResourcesLoader>().AsSingle().NonLazy();
+        Container.Bind<Armor>().AsSingle().NonLazy();
     }
     
     private void BindFactory()

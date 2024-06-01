@@ -14,6 +14,15 @@ public class SpawnTowerWeapon : MonoBehaviour, IListener
     public void Initialize()
     {
         _shopWeaponItem = _resourcesLoader.ShopWeaponItems;
+        //TEST 
+        // var weaponObject = _shopWeaponItem.Find(item => item.SlotData.Name == "Arrow");
+        // if (weaponObject)
+        // {
+        //     for (int i = 0; i < 10000; i++)
+        //     {
+        //         _weaponFactory.CreateWeapon(weaponObject.weaponObject.WeaponInfo);
+        //     }
+        // }
     }
 
     private void BuyItemInShop(string nameWeapon)

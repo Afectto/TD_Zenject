@@ -23,6 +23,12 @@ public class EventManager
         OnSetDamage?.Invoke(target, damage);
     }
 
+    public event Action<int, float, WeaponDamageType> OnSetDamageToEnemy;
+    public void TriggerOnSetDamageToEnemy(int target, float damage, WeaponDamageType weaponDamageType)
+    {
+        OnSetDamageToEnemy?.Invoke(target, damage, weaponDamageType);
+    }
+    
     public event Action<int> OnDeath;
     public void TriggerOnDeath(int owner)
     {

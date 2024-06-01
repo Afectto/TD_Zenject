@@ -7,7 +7,7 @@ using Zenject;
 public class Health : MonoBehaviour, IListener
 {
     [Inject] public EventManager EventManager { get;}
-
+    
     [SerializeField] private Text textHealth;
     [SerializeField] private bool isShowText;
     [SerializeField] private Image fillHealthBar;
@@ -17,7 +17,7 @@ public class Health : MonoBehaviour, IListener
     private int _ownerID;
     private float _currentHealth;
     private float _regenPerSecond;
-
+    
     private float CurrentHealth
     {
         get => _currentHealth;
@@ -39,9 +39,51 @@ public class Health : MonoBehaviour, IListener
 
     public void OnEnable()
     {
-        EventManager.OnSetDamage += EventManagerOnSetDamage;
+        AddEventIsEnemy();
         EventManager.OnAddRegenToTower += AddRegenToTower;
         EventManager.OnAddHealthToTower += AddMaxHealth;
+    }
+
+    #region EnemyEvent
+    private void AddEventIsEnemy()
+    {        
+        var isEnemy = GetComponent<Enemy>();
+        if (isEnemy)
+        {
+            
+            EventManager.OnSetDamageToEnemy += SetDamageEnemy;
+        }
+        else
+        {
+            EventManager.OnSetDamage += SetDamage;
+        }
+    }
+
+    private void RemoveEventIsEnemy()
+    {
+        var isEnemy = GetComponent<Enemy>();
+        if (isEnemy)
+        {
+            
+            EventManager.OnSetDamageToEnemy -= SetDamageEnemy;
+        }
+        else
+        {
+            EventManager.OnSetDamage -= SetDamage;
+        }
+    }
+    #endregion
+    
+    private void SetDamageEnemy(int owner, float damage, WeaponDamageType weaponDamageType)
+    {
+        if(damage <= 0 ) return;
+
+        if (_ownerID == owner)
+        {
+            var armorBehaviour = GetComponent<ArmorBehaviour>();
+            var damageReducedByArmor = armorBehaviour.GetDamageReducedByArmor(damage, weaponDamageType);
+            SetDamage(damageReducedByArmor);
+        }
     }
 
     private void AddRegenToTower(int owner, float value)
@@ -66,21 +108,26 @@ public class Health : MonoBehaviour, IListener
         // ReSharper disable once IteratorNeverReturns
     }
 
-    private void EventManagerOnSetDamage(int target, float damage)
+    private void SetDamage(int target, float damage)
     {
         if(damage <= 0 ) return;
         
         if (_ownerID == target)
         {
-            CurrentHealth -= damage;
-            if (CurrentHealth <= 0)
-            {
-                CurrentHealth = 0;
-                EventManager?.TriggerOnDeath(_ownerID);
-            }
+            SetDamage(damage);
         }
     }
 
+    private void SetDamage(float damage)
+    {
+        CurrentHealth -= damage;
+        if (CurrentHealth <= 0)
+        {
+            CurrentHealth = 0;
+            EventManager?.TriggerOnDeath(_ownerID);
+        }
+    }
+    
     private void AddHealth(float value)
     {
         CurrentHealth += value;
@@ -105,8 +152,10 @@ public class Health : MonoBehaviour, IListener
     
     public void OnDisable()
     {
-        EventManager.OnSetDamage -= EventManagerOnSetDamage;
+        RemoveEventIsEnemy();
         EventManager.OnAddRegenToTower -= AddRegenToTower;
         EventManager.OnAddHealthToTower -= AddMaxHealth;
     }
+    
+    
 }

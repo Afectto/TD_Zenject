@@ -21,15 +21,14 @@ public abstract class ShooterWeapon : Weapon
     }
     
     protected virtual IBullet CreateBullet()
-    {        
-        
+    {
         var difference = TargetTransform.position - transform.position;
         var rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         var rotation  = Quaternion.Euler(0f, 0f, rotationZ);
         
         var bullet = Instantiate(bulletPrefab, firePoint.position, rotation);
         bullet.OnSetDamage += BulletOnSetDamage;
-        bullet.onBulletDestroy += BulletDestroy;
+        bullet.OnBulletDestroy += BulletDestroy;
         bullet.OnSetSpeedAndTarget(bulletSpeed, TargetTransform);
 
         return bullet;
@@ -38,10 +37,10 @@ public abstract class ShooterWeapon : Weapon
     private void BulletDestroy(IBullet obj)
     {
         obj.OnSetDamage -= BulletOnSetDamage;
-        obj.onBulletDestroy -= BulletDestroy;
+        obj.OnBulletDestroy -= BulletDestroy;
     }
     
-    protected void BulletSetDamage(int targetInstanceID)
+    protected virtual void BulletSetDamage(int targetInstanceID)
     {
         EventManager.TriggerOnSetDamage(targetInstanceID, damage);
     }

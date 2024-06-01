@@ -8,7 +8,7 @@ public class ResourcesLoader : IInitializable
     public List<ShopWeaponItem> ShopWeaponItems { get; private set; }
     public List<ShopBuffItem> ShopBuffItems { get; private set; }
     public List<EnemyGroup> EnemyGroups { get; private set; }
-
+    
     [Inject]
     public void Initialize()
     {

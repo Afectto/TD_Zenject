@@ -10,7 +10,7 @@ public abstract class BulletBase : MonoBehaviour , IBullet
     
     protected event Action onEndMoveBulletToDeadTarget;
     public event Action<IBullet, int> OnSetDamage;
-    public event Action<IBullet> onBulletDestroy;
+    public event Action<IBullet> OnBulletDestroy;
 
     public void Update()
     {
@@ -66,7 +66,7 @@ public abstract class BulletBase : MonoBehaviour , IBullet
     
     protected void DestroyBullet()
     {
-        onBulletDestroy?.Invoke(this);
+        OnBulletDestroy?.Invoke(this);
         Destroy(gameObject);
     }
 }

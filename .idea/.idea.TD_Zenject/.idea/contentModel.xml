@@ -938,6 +938,9 @@
             <e p="BuffApplier.cs" t="Include" />
           </e>
           <e p="Components" t="Include">
+            <e p="Armor.cs" t="Include" />
+            <e p="ArmorBehaviour.cs" t="Include" />
+            <e p="ArmorType.cs" t="Include" />
             <e p="Health.cs" t="Include" />
             <e p="Info" t="Include">
               <e p="Buff" t="Include">
@@ -1020,7 +1023,6 @@
           </e>
           <e p="Tower" t="Include">
             <e p="ArrowWeapon.cs" t="Include" />
-            <e p="RicochetWeapon.cs" t="Include" />
             <e p="Tower.cs" t="Include" />
             <e p="Weapon" t="Include">
               <e p="SpawnTowerWeapon.cs" t="Include" />
@@ -1029,6 +1031,7 @@
               <e p="TowerWeaponMultiplayer.cs" t="Include" />
             </e>
           </e>
+          <e p="Utils.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Examples &amp; Extras" t="Include">

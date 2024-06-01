@@ -1,6 +1,9 @@
 using System.Collections;
+using Unity.Collections;
+using Unity.Jobs;
 using UnityEngine;
 using Zenject;
+using IJob = Unity.Jobs.IJob;
 
 public abstract class TowerWeapon : ShooterWeapon
 {
@@ -49,13 +52,45 @@ public abstract class TowerWeapon : ShooterWeapon
         _weaponMultiplayer.OnAddDamageBuff += AddDamage;
         _weaponMultiplayer.OnAddSpeedBuff += AddAttackRite;
     }
-
+    
     private void FindTarget()
     {
-        Utilities.ForEachEnemyInRadius(transform.position, WeaponRange,enemyObject =>
+        var enemyList = Utils.GetAllTagObjectInRadius("Enemy", transform.position, WeaponRange);
+        NativeArray<Vector3> enemyPositions = new NativeArray<Vector3>(enemyList.Count, Allocator.TempJob);
+        NativeArray<Vector3> targetPosition = new NativeArray<Vector3>(1, Allocator.TempJob);
+        
+        for (int i = 0; i < enemyList.Count; i++)
         {
-            SetTargetInstanceID(enemyObject.GetInstanceID(), enemyObject.transform);
-        });
+            enemyPositions[i] = enemyList[i].transform.position;
+        }
+        
+        FindTargetJob job = new FindTargetJob
+        {
+            enemyPositions = enemyPositions,
+            targetPosition = targetPosition,
+        };
+
+        JobHandle jobHandle = job.Schedule();
+        jobHandle.Complete();
+        
+        Vector3 finalTargetPosition = targetPosition[0];
+        
+        enemyPositions.Dispose();
+        targetPosition.Dispose();
+        
+        foreach (var enemy in enemyList)
+        {
+            if (enemy.transform.position == finalTargetPosition)
+            {
+                SetTargetInstanceID(enemy.GetInstanceID(), enemy.transform);
+                return;
+            }
+        }
+        
+        // Utils.ForEachEnemyInRadius(transform.position, WeaponRange,enemyObject =>
+        // {
+        //     SetTargetInstanceID(enemyObject.GetInstanceID(), enemyObject.transform);
+        // });
     }
 
     protected override IEnumerator Attack()
@@ -75,5 +110,36 @@ public abstract class TowerWeapon : ShooterWeapon
             yield return null;
         }
         // ReSharper disable once IteratorNeverReturns
+    }
+
+    protected override void BulletSetDamage(int targetInstanceID)
+    {
+        EventManager.TriggerOnSetDamageToEnemy(targetInstanceID, damage, weaponDamageType);
+    }
+}
+
+[BurstCompatible]
+public struct FindTargetJob : IJob
+{
+    [ReadOnly]
+    public NativeArray<Vector3> enemyPositions;
+    public NativeArray<Vector3> targetPosition;
+    
+    public void Execute()
+    {
+        Vector3 nearestEnemyPos = Vector3.zero;
+        float closestDistance = float.MaxValue;
+
+        for (int i = 0; i < enemyPositions.Length; i++)
+        {
+            float distance = Vector3.Distance(enemyPositions[i], targetPosition[0]);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                nearestEnemyPos = enemyPositions[i];
+            }
+        }
+
+        targetPosition[0] = nearestEnemyPos;
     }
 }

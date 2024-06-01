@@ -82,6 +82,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 18458220624957628, guid: ea9dd07affde37247a36345657aeccd5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8722976938102757653}
+    - targetCorrespondingSourceObject: {fileID: 18458220624957628, guid: ea9dd07affde37247a36345657aeccd5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4004013297974922427}
   m_SourcePrefab: {fileID: 100100000, guid: ea9dd07affde37247a36345657aeccd5, type: 3}
 --- !u!1 &8176200759600362593 stripped
 GameObject:
@@ -117,3 +120,17 @@ MonoBehaviour:
   attackRite: 1.35
   damage: 2
   weaponDamageType: 0
+--- !u!114 &4004013297974922427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8176200759600362593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8cbd187a9ed44aab4164c2693f94963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  armorType: 4
+  armorValue: 10

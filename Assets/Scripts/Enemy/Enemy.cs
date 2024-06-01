@@ -2,6 +2,7 @@ using UnityEngine;
 using Zenject;
 
 [RequireComponent(typeof(Health))]
+[RequireComponent(typeof(ArmorBehaviour))]
 [RequireComponent(typeof(MoveToTarget))]
 [DisallowMultipleComponent]
 [ExecuteInEditMode]
@@ -9,7 +10,7 @@ public abstract class Enemy : MonoBehaviour, IListener
 {
     [Inject] public EventManager EventManager { get;}
     [SerializeField] private float reward;
-    
+
     private Weapon _weapon;
     
     private void Awake()
@@ -26,6 +27,7 @@ public abstract class Enemy : MonoBehaviour, IListener
             if (enemy != null )
             {
                 enemy.gameObject.AddComponent<Health>();
+                enemy.gameObject.AddComponent<ArmorBehaviour>();
                 enemy.gameObject.AddComponent<MoveToTarget>();
             }
         }

@@ -1,7 +1,8 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
-public static class Utilities
+public static class Utils
 {
     public static void ForEachEnemyInRadius(Vector3 center, float radius, Action<GameObject> func)
     {
@@ -19,4 +20,20 @@ public static class Utilities
             }
         }
     }
+
+    public static List<Collider2D> GetAllTagObjectInRadius(string tag , Vector3 center, float radius)
+    {
+        List<Collider2D> rezult = new List<Collider2D>();
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(center, radius);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag(tag))
+            {
+                rezult.Add(collider);
+            }
+        }
+
+        return rezult;
+    }
+    
 }
