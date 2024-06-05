@@ -2,6 +2,31 @@ using System.Collections;
 using UnityEngine;
 using Zenject;
 
+public struct TargetInfo
+{
+    private int _targetInstanceID;
+    private Transform _targetTransform;
+
+    public int TargetInstanceID => _targetInstanceID;
+    public Transform TargetTransform => _targetTransform;
+    
+    public TargetInfo(int id, Transform target)
+    {
+        _targetInstanceID = id;
+        _targetTransform = target;
+    }
+
+    public TargetInfo(GameObject gameObject)
+    {
+        _targetInstanceID = gameObject.GetInstanceID();
+        _targetTransform = gameObject.transform;
+    }
+    public bool IsEmpty()
+    {
+        return _targetInstanceID == 0 || _targetTransform == null;
+    }
+}
+
 // [DisallowMultipleComponent]
 public abstract class Weapon : MonoBehaviour, IListener
 {
@@ -15,9 +40,8 @@ public abstract class Weapon : MonoBehaviour, IListener
     [SerializeField] protected float damage;
     [SerializeField] protected WeaponDamageType weaponDamageType;
 
-    protected int TargetInstanceID;
-    protected Transform TargetTransform;
-    
+    protected TargetInfo TargetInfo;
+
     public float WeaponRange => weaponRange;
     
 
@@ -37,10 +61,9 @@ public abstract class Weapon : MonoBehaviour, IListener
         EventManager.OnStopMoveEnemy -= EventManagerOnStopMoveEnemy;
     }
 
-    public void SetTargetInstanceID(int targetId, Transform target)
+    public void SetTargetInstanceID(TargetInfo targetInfo)
     {
-        TargetInstanceID = targetId;
-        TargetTransform = target;
+        TargetInfo = targetInfo;
     }
 
     private void EventManagerOnStopMoveEnemy(int owner)

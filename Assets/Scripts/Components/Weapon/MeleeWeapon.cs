@@ -7,8 +7,8 @@ public abstract class MeleeWeapon : Weapon
     {
         while (true)
         {
-                yield return new WaitForSeconds(attackRite);
-                EventManager.TriggerOnSetDamage(TargetInstanceID, damage);
+                yield return new WaitForSeconds(attackRite + Random.Range(0, 0.05f));
+                EventManager.TriggerOnSetDamage(TargetInfo.TargetInstanceID, damage);
         }
         // ReSharper disable once IteratorNeverReturns
     }

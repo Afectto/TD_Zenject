@@ -6,7 +6,7 @@ public class SplashDamageBullet : BulletBase
 
     public void OnEnable()
     {
-        onEndMoveBulletToDeadTarget += SetDamage;
+        OnEndMoveBulletToDeadTarget += SetDamage;
     }
     
     protected override void SetDamage()
@@ -21,6 +21,6 @@ public class SplashDamageBullet : BulletBase
     
     public void OnDisable()
     {
-        onEndMoveBulletToDeadTarget -= SetDamage;
+        OnEndMoveBulletToDeadTarget -= SetDamage;
     }
 }

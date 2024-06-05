@@ -38,7 +38,7 @@ public abstract class Enemy : MonoBehaviour, IListener
         EventManager?.TriggerMoveCommand(gameObject.GetInstanceID(), _weapon.WeaponRange, Vector3.zero);
 
         var tower = FindObjectOfType<Tower>().gameObject;
-        _weapon.SetTargetInstanceID(tower.GetInstanceID(), tower.transform);
+        _weapon.SetTargetInstanceID(new TargetInfo(tower.GetInstanceID(), tower.transform));
     }
 
     public void OnEnable()

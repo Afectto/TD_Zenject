@@ -1,14 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.Collections;
-using Unity.Jobs;
 using UnityEngine;
 using Zenject;
-using IJob = Unity.Jobs.IJob;
+using Random = UnityEngine.Random;
 
 public abstract class TowerWeapon : ShooterWeapon
 {
-    [Inject] private Armor _armor;
+    [Inject] protected Armor _armor;
     [Inject] private TowerWeaponMultiplayer _weaponMultiplayer;
     
     private float _baseDamage;
@@ -27,7 +24,6 @@ public abstract class TowerWeapon : ShooterWeapon
 
     public override void OnEnable()
     {
-        base.OnEnable();
         _weaponMultiplayer.OnAddDamageBuff += AddDamage;
         _weaponMultiplayer.OnAddSpeedBuff += AddAttackRite;
     }
@@ -50,92 +46,70 @@ public abstract class TowerWeapon : ShooterWeapon
 
     public override void OnDisable()
     {
-        base.OnDisable();
         _weaponMultiplayer.OnAddDamageBuff += AddDamage;
         _weaponMultiplayer.OnAddSpeedBuff += AddAttackRite;
     }
     
-    private void FindTarget()
+    protected virtual void FindTarget()
     {
-        // var enemyList = Utils.GetAllTagObjectInRadius("Enemy", transform.position, WeaponRange);
-        // NativeArray<Vector3> enemyPositions = new NativeArray<Vector3>(enemyList.Count, Allocator.TempJob);
-        // NativeArray<Vector3> targetPosition = new NativeArray<Vector3>(1, Allocator.TempJob);
-        //
-        // for (int i = 0; i < enemyList.Count; i++)
-        // {
-        //     enemyPositions[i] = enemyList[i].transform.position;
-        // }
-        //
-        // FindTargetJob job = new FindTargetJob
-        // {
-        //     enemyPositions = enemyPositions,
-        //     targetPosition = targetPosition,
-        // };
-        //
-        // JobHandle jobHandle = job.Schedule();
-        // jobHandle.Complete();
-        //
-        // Vector3 finalTargetPosition = targetPosition[0];
-        //
-        // enemyPositions.Dispose();
-        // targetPosition.Dispose();
-        //
-        // foreach (var enemy in enemyList)
-        // {
-        //     if (enemy.transform.position == finalTargetPosition)
-        //     {
-        //         SetTargetInstanceID(enemy.GetInstanceID(), enemy.transform);
-        //         return;
-        //     }
-        // }
-        GameObject closestEnemy = null;
+        GameObject enemy = null;
         float highestDamage = 0.0f;
         float closestDistance = float.MaxValue;
         
         Utils.ForEachEnemyInRadius(transform.position, WeaponRange,enemyObject =>
         {
-            var armor = enemyObject.GetComponent<ArmorBehaviour>();
-            var damageToEnemy = _armor.CalculateDamage(damage, weaponDamageType, armor.ArmorType, armor.Armor);
-     
+            var armorBehaviour = enemyObject.GetComponent<ArmorBehaviour>();
+            
+            var damageToEnemy = _armor.CalculateDamage(damage, weaponDamageType, armorBehaviour.ArmorType, armorBehaviour.Armor);
             float distanceToEnemy = Vector3.Distance(transform.position, enemyObject.transform.position);
-            var randomValue = Random.Range(0, 10000);
-            var variantFindEnemy = distanceToEnemy < closestDistance ||
-                                        (distanceToEnemy == closestDistance && highestDamage < damageToEnemy);//More Priority Closest
-            if (randomValue < 5000)
-            {
-                variantFindEnemy = highestDamage < damageToEnemy ||
-                                   (highestDamage == damageToEnemy && distanceToEnemy < closestDistance); //More Priority Damage
-            }
+            
+            bool variantFindEnemy = GetVariantFindEnemy(distanceToEnemy, closestDistance, damageToEnemy, highestDamage);
             
             if (variantFindEnemy)
             {
-                closestEnemy = enemyObject;
+                enemy = enemyObject;
                 highestDamage = damageToEnemy;
                 closestDistance = distanceToEnemy;
             }
         });
 
-        if (closestEnemy)
+        if (enemy)
         {
-            SetTargetInstanceID(closestEnemy.GetInstanceID(), closestEnemy.transform);
+            SetTargetInstanceID(new TargetInfo(enemy.GetInstanceID(), enemy.transform));
         }
     }
+
+    protected bool GetVariantFindEnemy(float distanceToEnemy, float closestDistance, 
+                                     float damageToEnemy, float highestDamage)
+    {
+        var randomValue = Random.Range(0, 10000);
+        var variantFindEnemy = distanceToEnemy < closestDistance ||
+                               (distanceToEnemy == closestDistance && highestDamage < damageToEnemy);//More Priority Closest
+        if (randomValue < 5000)
+        {
+            variantFindEnemy = highestDamage < damageToEnemy ||
+                               (highestDamage == damageToEnemy && distanceToEnemy < closestDistance); //More Priority Damage
+        }
+
+        return variantFindEnemy;
+    }
+    
 
     protected override IEnumerator Attack()
     {
         while (true)
         {
-            if (TargetTransform)
+            if (!TargetInfo.IsEmpty())
             {
                 CreateBullet();
-                yield return new WaitForSeconds(attackRite);
+                yield return new WaitForSeconds(attackRite + Random.Range(0, 0.05f));
             }
             else
             {
                 FindTarget();
             }
 
-            yield return new WaitForSeconds(0.1f);;
+            yield return new WaitForSeconds(0.1f + Random.Range(0, 0.05f));;
         }
         // ReSharper disable once IteratorNeverReturns
     }
@@ -145,29 +119,3 @@ public abstract class TowerWeapon : ShooterWeapon
         EventManager.TriggerOnSetDamageToEnemy(targetInstanceID, damage, weaponDamageType);
     }
 }
-
-// [BurstCompatible]
-// public struct FindTargetJob : IJob
-// {
-//     [ReadOnly]
-//     public NativeArray<Vector3> enemyPositions;
-//     public NativeArray<Vector3> targetPosition;
-//     
-//     public void Execute()
-//     {
-//         Vector3 nearestEnemyPos = Vector3.zero;
-//         float closestDistance = float.MaxValue;
-//
-//         for (int i = 0; i < enemyPositions.Length; i++)
-//         {
-//             float distance = Vector3.Distance(enemyPositions[i], targetPosition[0]);
-//             if (distance < closestDistance)
-//             {
-//                 closestDistance = distance;
-//                 nearestEnemyPos = enemyPositions[i];
-//             }
-//         }
-//
-//         targetPosition[0] = nearestEnemyPos;
-//     }
-// }

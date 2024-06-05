@@ -8,7 +8,7 @@ public abstract class BulletBase : MonoBehaviour , IBullet
     
     protected Transform Target;
     
-    protected event Action onEndMoveBulletToDeadTarget;
+    protected event Action OnEndMoveBulletToDeadTarget;
     public event Action<IBullet, int> OnSetDamage;
     public event Action<IBullet> OnBulletDestroy;
 
@@ -20,7 +20,7 @@ public abstract class BulletBase : MonoBehaviour , IBullet
             MoveBullet(_lastEnemyPosition);
             if (transform.position == _lastEnemyPosition)
             {
-                onEndMoveBulletToDeadTarget?.Invoke();
+                OnEndMoveBulletToDeadTarget?.Invoke();
                 DestroyBullet();
             }
             return;

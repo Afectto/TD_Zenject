@@ -35,7 +35,7 @@ public class SpawnEnemy : MonoBehaviour
         while(true)
         {
             SpawnRandomEnemyGroup();
-            yield return new WaitForSeconds(spawnDelay);
+            yield return new WaitForSeconds(spawnDelay + Random.Range(0, 0.1f));
         }
         // ReSharper disable once IteratorNeverReturns
     }

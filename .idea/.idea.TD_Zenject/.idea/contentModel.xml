@@ -1022,12 +1022,15 @@
             <e p="Slot.cs" t="Include" />
           </e>
           <e p="Tower" t="Include">
-            <e p="ArrowWeapon.cs" t="Include" />
             <e p="Tower.cs" t="Include" />
             <e p="Weapon" t="Include">
-              <e p="SpawnTowerWeapon.cs" t="Include" />
+              <e p="ArrowWeapon.cs" t="Include" />
+              <e p="MultishotWeapon.cs" t="Include" />
+              <e p="SpawnNewWeapon" t="Include">
+                <e p="SpawnTowerWeapon.cs" t="Include" />
+                <e p="TowerWeaponFactory.cs" t="Include" />
+              </e>
               <e p="TowerWeapon.cs" t="Include" />
-              <e p="TowerWeaponFactory.cs" t="Include" />
               <e p="TowerWeaponMultiplayer.cs" t="Include" />
             </e>
           </e>

@@ -6,11 +6,11 @@ using Random = UnityEngine.Random;
 
 public class EnemyFactory : ObjectFactory
 {
-    private float xMin = -13f;
-    private float xMax = 13f;
-    private float yMin = -6f;
-    private float yMax = 6f;
-    private float avoidanceRadius = 7f;
+    private const float XMin = -13f;
+    private const float XMax = 13f;
+    private const float YMin = -6f;
+    private const float YMax = 6f;
+    private const float AvoidanceRadius = 7f;
 
     public EnemyFactory(DiContainer container) : base(container)
     {
@@ -34,10 +34,10 @@ public class EnemyFactory : ObjectFactory
         }
     }
 
-    private void CreateEnemy(Vector3 groupPosition, GameObject enemyPrefab)
+    private void CreateEnemy(Vector2 groupPosition, GameObject enemyPrefab)
     {        
-        Vector3 offset = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f), 0f);
-        Vector3 spawnPosition = groupPosition + offset;
+        Vector2 offset = new Vector2(Random.Range(-0.5f, 0.5f), Random.Range(-0.5f, 0.5f));
+        Vector2 spawnPosition = groupPosition + offset;
         Create(enemyPrefab, spawnPosition, quaternion.identity);
     }
 
@@ -46,9 +46,9 @@ public class EnemyFactory : ObjectFactory
         float randX, randY;
         do
         {
-            randX = Random.Range(xMin, xMax);
-            randY = Random.Range(yMin, yMax);
-        } while (Vector2.Distance(new Vector2(randX, randY), Vector2.zero) < avoidanceRadius);
+            randX = Random.Range(XMin, XMax);
+            randY = Random.Range(YMin, YMax);
+        } while (Vector2.Distance(new Vector2(randX, randY), Vector2.zero) < AvoidanceRadius);
 
         return new Vector3(randX, randY, 0);
     }

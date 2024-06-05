@@ -8,8 +8,7 @@ public abstract class ShooterWeapon : Weapon
     [SerializeField] private float bulletSpeed;
     [SerializeField] private Transform firePoint;
     
-    protected abstract void BulletOnSetDamage(IBullet bullet, int targetInstanceID);
-    
+
     protected override IEnumerator Attack()
     {
         while (true)
@@ -22,14 +21,19 @@ public abstract class ShooterWeapon : Weapon
     
     protected virtual IBullet CreateBullet()
     {
-        var difference = TargetTransform.position - transform.position;
+        return CreateBullet(TargetInfo);
+    }
+
+    protected IBullet CreateBullet(TargetInfo targetInfo)
+    {
+        var difference = targetInfo.TargetTransform.position - transform.position;
         var rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         var rotation  = Quaternion.Euler(0f, 0f, rotationZ);
         
         var bullet = Instantiate(bulletPrefab, firePoint.position, rotation);
         bullet.OnSetDamage += BulletOnSetDamage;
         bullet.OnBulletDestroy += BulletDestroy;
-        bullet.OnSetSpeedAndTarget(bulletSpeed, TargetTransform);
+        bullet.OnSetSpeedAndTarget(bulletSpeed, targetInfo.TargetTransform);
 
         return bullet;
     }
@@ -40,6 +44,11 @@ public abstract class ShooterWeapon : Weapon
         obj.OnBulletDestroy -= BulletDestroy;
     }
     
+    private void BulletOnSetDamage(IBullet bullet, int targetInstanceID)
+    {
+        BulletSetDamage(targetInstanceID);
+    }
+
     protected virtual void BulletSetDamage(int targetInstanceID)
     {
         EventManager.TriggerOnSetDamage(targetInstanceID, damage);

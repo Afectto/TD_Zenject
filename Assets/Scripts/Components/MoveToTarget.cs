@@ -41,7 +41,7 @@ public class MoveToTarget : MonoBehaviour, IListener
         while (Vector3.Distance(transform.position, target) > stopDistance)
         {
             _owner.transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-            yield return null;
+            yield return new WaitForSeconds(Random.Range(0, 0.01f));
         }
         EventManager?.TriggerOnStopMoveEnemy(_owner.GetInstanceID());
     }

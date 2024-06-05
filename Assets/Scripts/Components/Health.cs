@@ -54,7 +54,7 @@ public class Health : MonoBehaviour, IListener
         if (isEnemy)
         {
             
-            EventManager.OnSetDamageToEnemy += SetDamageEnemy;
+            EventManager.OnSetDamageToEnemy += SetDamageToEnemy;
         }
         else
         {
@@ -68,7 +68,7 @@ public class Health : MonoBehaviour, IListener
         if (isEnemy)
         {
             
-            EventManager.OnSetDamageToEnemy -= SetDamageEnemy;
+            EventManager.OnSetDamageToEnemy -= SetDamageToEnemy;
         }
         else
         {
@@ -77,7 +77,7 @@ public class Health : MonoBehaviour, IListener
     }
     #endregion
     
-    private void SetDamageEnemy(int owner, float damage, WeaponDamageType weaponDamageType)
+    private void SetDamageToEnemy(int owner, float damage, WeaponDamageType weaponDamageType)
     {
         if(damage <= 0 ) return;
 
