@@ -20,6 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="575b67b3-549f-4941-9f7c-781be809db8d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Weapon/ShooterWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Weapon/ShooterWeapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +34,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C5ED7824-3908-4EF1-BC2A-D85EEC89E9FE/dd/50791250/RectTransform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1899C5BD-2A6D-4660-81CD-705BEE01D689/67/a0b54762/EditorStyles.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C5ED7824-3908-4EF1-BC2A-D85EEC89E9FE/f6/98d2938f/AtomicSafetyHandle.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Info/GlobalTimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C5ED7824-3908-4EF1-BC2A-D85EEC89E9FE/56/be19ea8d/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5A41D6B7-1898-42EC-A409-FD0B1C3E3DCF/0/System.cs" root0="SKIP_HIGHLIGHTING" />
@@ -49,16 +49,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B11BA2A8-FBF2-4F21-9F7C-C98532A11304/73/f8288e52/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B11BA2A8-FBF2-4F21-9F7C-C98532A11304/70/eac058b0/RuntimeConstructorInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/MultishotWeapon.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1899C5BD-2A6D-4660-81CD-705BEE01D689/86/84fd0175/SerializedProperty.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/79A7B2C7-0050-43D7-BA49-637CE6EAE1BD/04/0b8e3351/EventDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1899C5BD-2A6D-4660-81CD-705BEE01D689/38/31feeaa6/EditorGUILayout.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B11BA2A8-FBF2-4F21-9F7C-C98532A11304/eb/2217f496/ConstructorInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B11BA2A8-FBF2-4F21-9F7C-C98532A11304/a4/2529c882/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1899C5BD-2A6D-4660-81CD-705BEE01D689/28/84492f09/PropertyHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/TowerWeaponMultiplayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C5ED7824-3908-4EF1-BC2A-D85EEC89E9FE/3c/2d5b1f23/PropertyAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C5ED7824-3908-4EF1-BC2A-D85EEC89E9FE/6b/2eb17bf8/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shop/Slot.cs" root0="FORCE_HIGHLIGHTING" />
@@ -67,7 +64,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Info/WeaponDamageType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Info/EnemyBuffType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/Shop/ShopWeaponItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/Object/WeaponObject.cs" />
@@ -113,10 +109,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyShooterWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/ArrowWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/SpawnNewWeapon/SpawnTowerWeapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Weapon/ShooterWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Weapon/Weapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/TowerWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/MultishotWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/BarrageWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Weapon/ShooterWeapon.cs" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -155,10 +152,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="37528">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="37528" />
+      <option name="pid" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -182,6 +179,7 @@
       <workItem from="1717313003601" duration="3297000" />
       <workItem from="1717576029110" duration="747000" />
       <workItem from="1717588379992" duration="7211000" />
+      <workItem from="1717596264069" duration="646000" />
     </task>
     <servers />
   </component>

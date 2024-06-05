@@ -1025,6 +1025,7 @@
             <e p="Tower.cs" t="Include" />
             <e p="Weapon" t="Include">
               <e p="ArrowWeapon.cs" t="Include" />
+              <e p="BarrageWeapon.cs" t="Include" />
               <e p="MultishotWeapon.cs" t="Include" />
               <e p="SpawnNewWeapon" t="Include">
                 <e p="SpawnTowerWeapon.cs" t="Include" />

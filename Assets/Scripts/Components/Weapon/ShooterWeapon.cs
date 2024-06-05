@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public abstract class ShooterWeapon : Weapon
@@ -19,9 +20,13 @@ public abstract class ShooterWeapon : Weapon
         // ReSharper disable once IteratorNeverReturns
     }
     
-    protected virtual IBullet CreateBullet()
+    protected virtual void CreateBullet()
     {
-        return CreateBullet(TargetInfo);
+        if (!TargetInfo.IsEmpty())
+        {
+            CreateBullet(TargetInfo);
+        }
+
     }
 
     protected IBullet CreateBullet(TargetInfo targetInfo)
