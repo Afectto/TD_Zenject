@@ -6,4 +6,4 @@ Need Add:
 5.	Poison and etc. logic (by 1 enemy)
 6.	~~Select Target logic  - Done~~
 7.  Reflect logic
-8.  Multishot weapon
+8.  ~~Multishot weapon~~
