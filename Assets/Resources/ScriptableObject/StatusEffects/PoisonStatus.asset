@@ -16,4 +16,4 @@ MonoBehaviour:
   duration: 3
   tickInterval: 0.3
   isStackable: 1
-  damagePerTick: 3
+  damagePerTick: 0.5
