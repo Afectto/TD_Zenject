@@ -1,23 +1,32 @@
+using System.Collections;
 using UnityEngine;
 
 public class Timer
 {
     private float startTime;
     private float currentTime;
+    
+    private Utils.Coroutines Coroutines;
 
     public Timer()
     {
         Reset();
+        Coroutines = new GameObject("[COROUTINES]").AddComponent<Utils.Coroutines>();
     }
 
     public void Start()
     {
         startTime = Time.time;
+        Coroutines.StartCoroutine(Update());
     }
 
-    public void Update()
+    private IEnumerator Update()
     {
-        currentTime = Time.time - startTime;
+        while (true)
+        {
+            currentTime = Time.time - startTime;
+            yield return null;
+        }
     }
 
     public void Reset()

@@ -974,6 +974,7 @@
             <e p="MoveToTarget.cs" t="Include" />
             <e p="ObjectFactory.cs" t="Include" />
             <e p="ResourcesLoader.cs" t="Include" />
+            <e p="StatusManager.cs" t="Include" />
             <e p="Timer.cs" t="Include" />
             <e p="Weapon" t="Include">
               <e p="Bullet" t="Include">
@@ -1015,6 +1016,14 @@
               <e p="ShopItem.cs" t="Include" />
               <e p="ShopWeaponItem.cs" t="Include" />
             </e>
+            <e p="StatusEffect" t="Include">
+              <e p="Base" t="Include">
+                <e p="NonDamageStatusEffect.cs" t="Include" />
+                <e p="StatusEffect.cs" t="Include" />
+              </e>
+              <e p="DamageStatusEffect.cs" t="Include" />
+              <e p="IceStatusEffect.cs" t="Include" />
+            </e>
           </e>
           <e p="Shop" t="Include">
             <e p="MoneyManager.cs" t="Include" />
@@ -1030,6 +1039,11 @@
               <e p="SpawnNewWeapon" t="Include">
                 <e p="SpawnTowerWeapon.cs" t="Include" />
                 <e p="TowerWeaponFactory.cs" t="Include" />
+              </e>
+              <e p="StatusWeapon" t="Include">
+                <e p="FireArrowWeapon.cs" t="Include" />
+                <e p="IceArrowWeapon.cs" t="Include" />
+                <e p="PoisonArrowWeapon.cs" t="Include" />
               </e>
               <e p="TowerWeapon.cs" t="Include" />
               <e p="TowerWeaponMultiplayer.cs" t="Include" />

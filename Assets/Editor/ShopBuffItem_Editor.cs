@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEditor;
+﻿using UnityEditor;
 
 [CustomEditor(typeof(ShopBuffItem))]
 public class ShopBuffItem_Editor : Editor

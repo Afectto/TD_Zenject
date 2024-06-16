@@ -18,7 +18,7 @@ public class UpdateTimer : MonoBehaviour
     private void Update()
     {
         var timeValue = 30 - _time.GetSeconds();
-        _time.Update();
+
         if (timeValue < 0)
         {
             timeValue = 30;

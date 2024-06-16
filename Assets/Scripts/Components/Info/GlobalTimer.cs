@@ -14,7 +14,6 @@ public class GlobalTimer : MonoBehaviour
 
     private void Update()
     {
-        _time.Update();
         _timeText.text = _time.GetTimeFormatted();
     }
 }

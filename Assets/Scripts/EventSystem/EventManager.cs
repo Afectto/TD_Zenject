@@ -121,5 +121,27 @@ public class EventManager
 
 
 
+    #region EnemyStatus
+    public event Action<StatusEffectType, int> OnSetStatus;
+    public void TriggerOnSetStatus(StatusEffectType obj, int target)
+    {
+        OnSetStatus?.Invoke(obj, target);
+    }
+    
+    public event Action<IStatusEffect> OnRemoveActiveStatus;
+    public void TriggerOnRemoveActiveStatus(IStatusEffect obj)
+    {
+        OnRemoveActiveStatus?.Invoke(obj);
+    }
+
+    public event Action<int, float> OnChangeIceStatus;
+    public void TriggerOnChangeIceStatus(int target, float value)
+    {
+        OnChangeIceStatus?.Invoke(target, value);
+    }
+
     #endregion
+
+    #endregion
+
 }

@@ -21,11 +21,21 @@ public class MoveToTarget : MonoBehaviour, IListener
     public void OnEnable()
     {
         EventManager.MoveCommand += OnMoveToTarget;
+        EventManager.OnChangeIceStatus += ChangeIceStatus;
     }
 
     public void OnDisable()
     {
         EventManager.MoveCommand -= OnMoveToTarget;
+        EventManager.OnChangeIceStatus -= ChangeIceStatus;
+    }
+
+    private void ChangeIceStatus(int target, float value)
+    {
+        if (target == _ownerID)
+        {
+            speed += value;
+        }
     }
 
     private void OnMoveToTarget(int owner, float stopDistance, Vector3 target)

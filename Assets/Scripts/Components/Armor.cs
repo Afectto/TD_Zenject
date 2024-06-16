@@ -44,7 +44,12 @@ public class Armor : IInitializable
     
     public float CalculateDamage(float damage, WeaponDamageType weaponDamageType, ArmorType armorType, float armorValue)
     {
-        if (weaponDamageType == WeaponDamageType.None || armorType == ArmorType.None)
+        if (weaponDamageType == WeaponDamageType.None)
+        {
+            return damage;
+        }
+        
+        if (armorType == ArmorType.None)
         {
             throw new Exception("WeaponDamageType or armorType is None");
         }

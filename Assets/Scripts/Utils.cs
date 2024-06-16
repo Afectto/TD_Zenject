@@ -35,5 +35,8 @@ public static class Utils
 
         return rezult;
     }
-    
+
+    public class Coroutines : MonoBehaviour { }
 }
+
+

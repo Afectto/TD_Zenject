@@ -6,6 +6,7 @@ public class GameInstaller : MonoInstaller
     [SerializeField]private Tower tower; 
     [SerializeField]private MoneyManager moneyManager; 
     [SerializeField]private Shop shop;
+    [SerializeField] private StatusManager statusManager;
 
     public override void InstallBindings()
     {
@@ -21,6 +22,7 @@ public class GameInstaller : MonoInstaller
         Container.BindInstance(tower);
         Container.BindInstance(moneyManager);
         Container.BindInstance(shop);
+        Container.BindInstance(statusManager);
     }
 
     private void BindSingle()
