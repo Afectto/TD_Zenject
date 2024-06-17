@@ -9,6 +9,11 @@ public class MultishotWeapon : TowerWeapon
     [SerializeField]private int maxTargetCount;
     private List<TargetInfo> _targetsInfo;
 
+    public override void OnValidate()
+    {
+        totalDPS = (damage / attackRite * maxTargetCount).ToString();
+    }
+
     protected override void Awake()
     {
         _targetsInfo = new List<TargetInfo>();

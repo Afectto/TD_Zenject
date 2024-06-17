@@ -12,6 +12,7 @@
           <e p="ShopBuffItem_Editor.cs" t="Include" />
           <e p="ShopWeaponItem_Editor.cs" t="Include" />
           <e p="Status_Editor.cs" t="Include" />
+          <e p="TowerWeapon_Editor.cs" t="Include" />
         </e>
         <e p="Plugins" t="Include">
           <e p="Zenject" t="Include">

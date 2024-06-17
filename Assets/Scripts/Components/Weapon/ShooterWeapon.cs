@@ -5,7 +5,7 @@ public abstract class ShooterWeapon : Weapon
 {
     [Space(5)]
     [Header("Shooter Component")]
-    [SerializeField] private BulletBase bulletPrefab;
+    [SerializeField] protected BulletBase bulletPrefab;
     [SerializeField] private float bulletSpeed;
     [SerializeField] private Transform firePoint;
     

@@ -7,7 +7,12 @@ public class BarrageWeapon : TowerWeapon
     [Header("Barrage Component")]
     [SerializeField] private int bulletCountInOneShot;
     [SerializeField] private float delay;
-    
+
+    public override void OnValidate()
+    {
+        totalDPS = (damage / attackRite * bulletCountInOneShot).ToString();
+    }
+
     protected override IEnumerator Attack()
     {
         while (true)

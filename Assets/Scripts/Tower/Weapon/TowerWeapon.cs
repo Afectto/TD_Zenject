@@ -11,6 +11,19 @@ public abstract class TowerWeapon : ShooterWeapon
     private float _baseDamage;
     private float _baseAttackRite;
 
+    [HideInInspector] public string totalDPS;
+    public virtual void OnValidate()
+    {
+        if (!(bulletPrefab is RicochetBullet))
+        {
+            totalDPS = (damage / attackRite).ToString();
+        }
+        else
+        {
+            totalDPS = "";
+        }
+    }
+
     protected override void Awake()
     {
         base.Awake();

@@ -20,30 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="575b67b3-549f-4941-9f7c-781be809db8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/StatusWeapon/StatusWeapon.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/StatusWeapon/StatusWeapon.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TD_Zenject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tower/Weapon/Variant/StatusWeapon/IceArrowWeapon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tower/Weapon/Variant/StatusWeapon/IceArrowWeapon.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tower/Weapon/Variant/StatusWeapon/PoisonArrowWeapon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tower/Weapon/Variant/StatusWeapon/PoisonArrowWeapon.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/StatusEffects/FireStatus.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/StatusEffects/FireStatus.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/StatusEffects/FireStatus.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/StatusEffects/FireStatus.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/StatusEffects/IceStatus.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/StatusEffects/IceStatus.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/StatusEffects/PoisonStatus.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ScriptableObject/StatusEffects/PoisonStatus.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/MoveToTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/MoveToTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/ResourcesLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ResourcesLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/ResourcesLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ResourcesLoader.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/StatusManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/StatusManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Weapon/ShooterWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Weapon/ShooterWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventSystem/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventSystem/GameInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/StatusEffect/Base/StatusEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/StatusEffect/Base/StatusEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/StatusEffect/DamageStatusEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/StatusEffect/DamageStatusEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/StatusEffect/IceStatusEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/StatusEffect/IceStatusEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/ArrowWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/ArrowWeapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/BarrageWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/BarrageWeapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/MultishotWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/MultishotWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/StatusWeapon/FireArrowWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/StatusWeapon/FireArrowWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/StatusWeapon/IceArrowWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/StatusWeapon/IceArrowWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/StatusWeapon/PoisonArrowWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/StatusWeapon/PoisonArrowWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/TowerWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/TowerWeapon.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +74,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Interface/IBullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/ResourcesLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Info/Weapon/WeaponDamageType.cs" />
@@ -104,7 +89,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Spawn Enemy/EnemyFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Weapon/MeleeWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyShooterWeapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/ArrowWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/SpawnNewWeapon/SpawnTowerWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Weapon/Weapon.cs" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -132,13 +116,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/StatusWeapon/IceArrowWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/StatusWeapon/FireArrowWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/StatusEffect/Base/StatusEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/BarrageWeapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/MultishotWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/StatusWeapon/StatusWeapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Weapon/ShooterWeapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/TowerWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/Status_Editor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObject/StatusEffect/DamageStatusEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/TowerWeapon_Editor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/MultishotWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/BarrageWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Weapon/ShooterWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/ArrowWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/TowerWeapon.cs" />
       </list>
     </option>
   </component>
@@ -235,70 +221,70 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="524" height="464" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1718547796543" />
-    <state width="1877" height="248" key="GridCell.Tab.0.bottom" timestamp="1718620689897">
+    <state width="1877" height="248" key="GridCell.Tab.0.bottom" timestamp="1718622515342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1718620689897" />
-    <state width="1877" height="248" key="GridCell.Tab.0.center" timestamp="1718620689897">
+    <state width="1877" height="248" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1718622515342" />
+    <state width="1877" height="248" key="GridCell.Tab.0.center" timestamp="1718622515342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1718620689897" />
-    <state width="1877" height="248" key="GridCell.Tab.0.left" timestamp="1718620689897">
+    <state width="1877" height="248" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1718622515342" />
+    <state width="1877" height="248" key="GridCell.Tab.0.left" timestamp="1718622515342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1718620689897" />
-    <state width="1877" height="248" key="GridCell.Tab.0.right" timestamp="1718620689897">
+    <state width="1877" height="248" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1718622515342" />
+    <state width="1877" height="248" key="GridCell.Tab.0.right" timestamp="1718622515342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1718620689897" />
-    <state width="1877" height="248" key="GridCell.Tab.1.bottom" timestamp="1718620793013">
+    <state width="1877" height="248" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1718622515342" />
+    <state width="1877" height="248" key="GridCell.Tab.1.bottom" timestamp="1718622515245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1718620793013" />
-    <state width="1877" height="248" key="GridCell.Tab.1.center" timestamp="1718620793013">
+    <state width="1877" height="248" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1718622515245" />
+    <state width="1877" height="248" key="GridCell.Tab.1.center" timestamp="1718622515245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1718620793013" />
-    <state width="1877" height="248" key="GridCell.Tab.1.left" timestamp="1718620793013">
+    <state width="1877" height="248" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1718622515245" />
+    <state width="1877" height="248" key="GridCell.Tab.1.left" timestamp="1718622515245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1718620793013" />
-    <state width="1877" height="248" key="GridCell.Tab.1.right" timestamp="1718620793013">
+    <state width="1877" height="248" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1718622515245" />
+    <state width="1877" height="248" key="GridCell.Tab.1.right" timestamp="1718622515245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1718620793013" />
-    <state width="1877" height="248" key="GridCell.Tab.2.bottom" timestamp="1718620689798">
+    <state width="1877" height="248" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1718622515245" />
+    <state width="1877" height="248" key="GridCell.Tab.2.bottom" timestamp="1718622515245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1718620689798" />
-    <state width="1877" height="248" key="GridCell.Tab.2.center" timestamp="1718620689797">
+    <state width="1877" height="248" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1718622515245" />
+    <state width="1877" height="248" key="GridCell.Tab.2.center" timestamp="1718622515245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1718620689797" />
-    <state width="1877" height="248" key="GridCell.Tab.2.left" timestamp="1718620689797">
+    <state width="1877" height="248" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1718622515245" />
+    <state width="1877" height="248" key="GridCell.Tab.2.left" timestamp="1718622515245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1718620689797" />
-    <state width="1877" height="248" key="GridCell.Tab.2.right" timestamp="1718620689797">
+    <state width="1877" height="248" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1718622515245" />
+    <state width="1877" height="248" key="GridCell.Tab.2.right" timestamp="1718622515245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1718620689797" />
-    <state width="1877" height="248" key="GridCell.Tab.3.bottom" timestamp="1718620689798">
+    <state width="1877" height="248" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1718622515245" />
+    <state width="1877" height="248" key="GridCell.Tab.3.bottom" timestamp="1718622515245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1718620689798" />
-    <state width="1877" height="248" key="GridCell.Tab.3.center" timestamp="1718620689798">
+    <state width="1877" height="248" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1718622515245" />
+    <state width="1877" height="248" key="GridCell.Tab.3.center" timestamp="1718622515245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1718620689798" />
-    <state width="1877" height="248" key="GridCell.Tab.3.left" timestamp="1718620689798">
+    <state width="1877" height="248" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1718622515245" />
+    <state width="1877" height="248" key="GridCell.Tab.3.left" timestamp="1718622515245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1718620689798" />
-    <state width="1877" height="248" key="GridCell.Tab.3.right" timestamp="1718620689798">
+    <state width="1877" height="248" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1718622515245" />
+    <state width="1877" height="248" key="GridCell.Tab.3.right" timestamp="1718622515245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="248" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1718620689798" />
+    <state width="1877" height="248" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1718622515245" />
     <state x="1183" y="227" key="RiderGenerateDialog" timestamp="1718551302017">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -329,13 +315,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Tower/Weapon/MultishotWeapon.cs</url>
-          <line>28</line>
+          <line>33</line>
           <properties documentPath="D:\UnityProgram\TD_Zenject\Assets\Scripts\Tower\Weapon\MultishotWeapon.cs" initialLine="26">
             <startOffsets>
-              <option value="712" />
+              <option value="833" />
             </startOffsets>
             <endOffsets>
-              <option value="744" />
+              <option value="865" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="11" />

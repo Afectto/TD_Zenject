@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 271fb1102260494a99bd0c5dc4a39a24, type: 3}
   m_Name: PoisonStatus
   m_EditorClassIdentifier: 
-  statusEffectStatus: 0
-  duration: 0
-  tickInterval: 0
-  isStackable: 0
-  damagePerTick: 0
+  statusEffectStatus: 1
+  duration: 5
+  tickInterval: 0.4
+  isStackable: 1
+  damagePerTick: 1
+  totalDamage: 12

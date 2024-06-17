@@ -16,4 +16,4 @@ MonoBehaviour:
   duration: 3
   tickInterval: 0.01
   isStackable: 0
-  speedRedaction: 1.5
+  percentSpeedRedaction: 0.5
