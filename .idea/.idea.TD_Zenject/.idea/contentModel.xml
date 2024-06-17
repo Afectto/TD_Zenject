@@ -11,6 +11,7 @@
         <e p="Editor" t="Include">
           <e p="ShopBuffItem_Editor.cs" t="Include" />
           <e p="ShopWeaponItem_Editor.cs" t="Include" />
+          <e p="Status_Editor.cs" t="Include" />
         </e>
         <e p="Plugins" t="Include">
           <e p="Zenject" t="Include">
@@ -973,7 +974,6 @@
             </e>
             <e p="MoveToTarget.cs" t="Include" />
             <e p="ObjectFactory.cs" t="Include" />
-            <e p="ResourcesLoader.cs" t="Include" />
             <e p="StatusManager.cs" t="Include" />
             <e p="Timer.cs" t="Include" />
             <e p="Weapon" t="Include">
@@ -1009,6 +1009,7 @@
             <e p="EventManager.cs" t="Include" />
             <e p="GameInstaller.cs" t="Include" />
           </e>
+          <e p="ResourcesLoader.cs" t="Include" />
           <e p="ScriptableObject" t="Include">
             <e p="EnemyGroup.cs" t="Include" />
             <e p="Shop" t="Include">
@@ -1044,6 +1045,7 @@
                 <e p="FireArrowWeapon.cs" t="Include" />
                 <e p="IceArrowWeapon.cs" t="Include" />
                 <e p="PoisonArrowWeapon.cs" t="Include" />
+                <e p="StatusWeapon.cs" t="Include" />
               </e>
               <e p="TowerWeapon.cs" t="Include" />
               <e p="TowerWeaponMultiplayer.cs" t="Include" />

@@ -28,7 +28,7 @@ public abstract class StatusEffect : ScriptableObject, IStatusEffect, IListener
     protected int targetEnemyId;
     protected int tickCount;
     protected float lastUpdateTime;
-
+    
     public StatusEffectType StatusEffectStatus => statusEffectStatus;
     public float Duration => duration;
     public float TickInterval => tickInterval;

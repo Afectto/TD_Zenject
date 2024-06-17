@@ -8,7 +8,8 @@ public class MoveToTarget : MonoBehaviour, IListener
     [Inject] public EventManager EventManager { get;}
     
     [SerializeField] private float speed;
-    
+
+    private float _baseSpeed;
     private GameObject _owner;
     private int _ownerID;
     
@@ -16,6 +17,7 @@ public class MoveToTarget : MonoBehaviour, IListener
     {
         _owner = gameObject;
         _ownerID = _owner.GetInstanceID();
+        _baseSpeed = speed;
     }
 
     public void OnEnable()
@@ -34,7 +36,7 @@ public class MoveToTarget : MonoBehaviour, IListener
     {
         if (target == _ownerID)
         {
-            speed += value;
+            speed = _baseSpeed * value;
         }
     }
 

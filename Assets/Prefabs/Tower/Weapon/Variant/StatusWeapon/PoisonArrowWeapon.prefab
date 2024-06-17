@@ -85,3 +85,4 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7593493507323517976, guid: 01827a89ff0049d4dbc99c81c351abc7, type: 3}
   bulletSpeed: 10
   firePoint: {fileID: 0}
+  _statusEffectType: 1

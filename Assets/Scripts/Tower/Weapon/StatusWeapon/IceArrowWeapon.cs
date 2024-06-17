@@ -1,8 +1,3 @@
-public class IceArrowWeapon : ArrowWeapon
+public class IceArrowWeapon : StatusWeapon
 {
-    protected override void BulletSetDamage(int targetInstanceID)
-    {
-        base.BulletSetDamage(targetInstanceID);
-        EventManager.TriggerOnSetStatus(StatusEffectType.Ice, targetInstanceID);
-    }
 }

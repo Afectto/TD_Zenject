@@ -1,8 +1,3 @@
-public class PoisonArrowWeapon : ArrowWeapon
+public class PoisonArrowWeapon : StatusWeapon
 {
-    protected override void BulletSetDamage(int targetInstanceID)
-    {
-        base.BulletSetDamage(targetInstanceID);
-        EventManager.TriggerOnSetStatus(StatusEffectType.Poison, targetInstanceID);
-    }
 }

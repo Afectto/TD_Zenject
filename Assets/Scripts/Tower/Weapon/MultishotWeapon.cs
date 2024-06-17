@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MultishotWeapon : TowerWeapon
 {
-    [Space(15)]
+    [Space(5)]
+    [Header("Multishot Component")]
     [SerializeField]private int maxTargetCount;
     private List<TargetInfo> _targetsInfo;
 

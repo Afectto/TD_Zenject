@@ -8,6 +8,7 @@ public class ResourcesLoader : IInitializable
     public List<ShopWeaponItem> ShopWeaponItems { get; private set; }
     public List<ShopBuffItem> ShopBuffItems { get; private set; }
     public List<EnemyGroup> EnemyGroups { get; private set; }
+    public List<StatusEffect> StatusEffects { get; private set; }
     
     [Inject]
     public void Initialize()
@@ -20,5 +21,6 @@ public class ResourcesLoader : IInitializable
         ShopWeaponItems = Resources.LoadAll<ShopWeaponItem>("ScriptableObject/ShopItem/WeaponItem").ToList();
         ShopBuffItems = Resources.LoadAll<ShopBuffItem>("ScriptableObject/ShopItem/BuffItem").ToList();
         EnemyGroups = Resources.LoadAll<EnemyGroup>("ScriptableObject/EnemyGroup").ToList();
+        StatusEffects = Resources.LoadAll<StatusEffect>("ScriptableObject/StatusEffects").ToList();
     }
 }

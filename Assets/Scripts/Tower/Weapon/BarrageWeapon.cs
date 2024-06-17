@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class BarrageWeapon : TowerWeapon
 {
-    [Space(15)]
+    [Space(5)]
+    [Header("Barrage Component")]
     [SerializeField] private int bulletCountInOneShot;
     [SerializeField] private float delay;
     

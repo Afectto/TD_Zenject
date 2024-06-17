@@ -3,7 +3,8 @@ using UnityEngine;
 
 public abstract class ShooterWeapon : Weapon
 {
-    [Space(15)]
+    [Space(5)]
+    [Header("Shooter Component")]
     [SerializeField] private BulletBase bulletPrefab;
     [SerializeField] private float bulletSpeed;
     [SerializeField] private Transform firePoint;

@@ -5,11 +5,12 @@ using Zenject;
 
 public class StatusManager : MonoBehaviour, IListener
 {
+    [Inject] private ResourcesLoader _resourcesLoader;
     [Inject] public EventManager EventManager { get; }
+    
     private DiContainer _container;
     
-    [SerializeField] private List<StatusEffect> _statusEffects;
-    
+    private List<StatusEffect> _statusEffects;
     private List<IStatusEffect> _activeStatusEffects;
 
     [Inject]
@@ -17,6 +18,7 @@ public class StatusManager : MonoBehaviour, IListener
     {
         _container = container;
         _activeStatusEffects = new List<IStatusEffect>();
+        _statusEffects = _resourcesLoader.StatusEffects;
     }
 
     public void OnEnable()

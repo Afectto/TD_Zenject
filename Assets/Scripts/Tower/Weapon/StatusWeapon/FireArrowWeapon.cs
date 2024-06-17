@@ -1,8 +1,3 @@
-public class FireArrowWeapon : ArrowWeapon
+public class FireArrowWeapon : StatusWeapon
 {
-    protected override void BulletSetDamage(int targetInstanceID)
-    {
-        base.BulletSetDamage(targetInstanceID);
-        EventManager.TriggerOnSetStatus(StatusEffectType.Fire, targetInstanceID);
-    }
 }
